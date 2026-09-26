@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>말랑픽 확률 정보 · Malang Pick Probability Information</title>
+<meta name="description" content="Tiger Room 말랑픽(Malang Pick) 뽑기 확률 정보 · Draw odds">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="lang-toggle" role="group" aria-label="언어 / Language">
+  <button type="button" data-lang="ko">한국어</button>
+  <button type="button" data-lang="en">English</button>
+</div>
+
+<!-- Generated from the game data (catalog.json, creatures.json, odds-history.json) by make_probability_page.py in the
+     Malang Pick repository (Builds/probability-disclosure-20260926). Do not edit by hand: regenerate. -->
+
+<!-- ==================== 한국어 ==================== -->
+<main id="ko" class="section" lang="ko">
+
+<h1>말랑픽 확률 정보</h1>
+<p class="updated">적용일: 2026년 9월 26일 · 최초 공개: 2026년 9월 26일</p>
+
+<p class="lead"><strong>Tiger Room</strong>의 모바일 게임 <strong>말랑픽(Malang Pick)</strong>의 뽑기(테마 캡슐 머신)는 확률형 아이템입니다. 「게임산업진흥에 관한 법률」 제33조제2항과 같은 법 시행령 제19조의2, 별표 3의2에 따라 뽑기로 나오는 모든 친구와 공급 확률을 알려 드립니다. 아래 숫자는 게임이 실제로 뽑을 때 쓰는 데이터에서 그대로 만든 값이며, 반올림하지 않은 정확한 확률입니다.</p>
+
+<h2 id="how">1. 뽑기 방식</h2>
+<ul>
+  <li>테마마다 캡슐 머신이 있고, 한 번 뽑으면 그 테마의 친구 15종 가운데 1종이 나옵니다.</li>
+  <li>티켓 1장(유료로 살 수 있습니다) 또는 광고 1회 시청으로 한 번 뽑습니다. 두 방법의 확률은 같습니다.</li>
+  <li>뽑기는 매번 독립입니다. 이전에 무엇이 나왔는지와 상관없이 확률은 늘 같습니다.</li>
+  <li>이미 가진 친구도 같은 확률로 나옵니다(중복).</li>
+  <li>천장(정해진 횟수를 뽑으면 확정으로 주는 보장)은 없습니다.</li>
+  <li>친구 이름은 게임에 표시되는 이름 그대로 적었습니다. 등급은 게임 표기(영어)와 우리말을 함께 적었습니다.</li>
+</ul>
+
+<h2 id="ocean">2. 바다(OCEAN) 테마</h2>
+<h3>등급별 합계</h3>
+<table>
+  <tr><th>등급</th><th style="width:26%">친구 수</th><th style="width:28%">확률 합계</th></tr>
+  <tr data-theme="ocean" data-grade="common" data-percent="48"><td>COMMON (일반)</td><td>6종</td><td>48%</td></tr>
+  <tr data-theme="ocean" data-grade="uncommon" data-percent="28"><td>UNCOMMON (고급)</td><td>4종</td><td>28%</td></tr>
+  <tr data-theme="ocean" data-grade="rare" data-percent="15"><td>RARE (희귀)</td><td>3종</td><td>15%</td></tr>
+  <tr data-theme="ocean" data-grade="legendary" data-percent="9"><td>LEGENDARY (전설)</td><td>2종</td><td>9%</td></tr>
+  <tr><td><strong>합계</strong></td><td>15종</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>친구별 확률</h3>
+<table>
+  <tr><th style="width:34%">등급</th><th>친구</th><th style="width:22%">확률</th></tr>
+  <tr data-theme="ocean" data-friend="bubble" data-percent="8"><td>COMMON (일반)</td><td>Bubble</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="cove" data-percent="8"><td>COMMON (일반)</td><td>Cove</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="skim" data-percent="8"><td>COMMON (일반)</td><td>Skim</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="pebble" data-percent="8"><td>COMMON (일반)</td><td>Pebble</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="bubbles" data-percent="8"><td>COMMON (일반)</td><td>Bubbles</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="sand" data-percent="8"><td>COMMON (일반)</td><td>Sandy</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="shelly" data-percent="7"><td>UNCOMMON (고급)</td><td>Shelly</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="dash" data-percent="7"><td>UNCOMMON (고급)</td><td>Dash</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="twirl" data-percent="7"><td>UNCOMMON (고급)</td><td>Twirl</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="pinch" data-percent="7"><td>UNCOMMON (고급)</td><td>Pinch</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="pearl" data-percent="5"><td>RARE (희귀)</td><td>Pearl</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="ripple" data-percent="5"><td>RARE (희귀)</td><td>Ripple</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="inky" data-percent="5"><td>RARE (희귀)</td><td>Inky</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="coral" data-percent="5"><td>LEGENDARY (전설)</td><td>Coral</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="penguin" data-percent="4"><td>LEGENDARY (전설)</td><td>Pengu</td><td>4%</td></tr>
+</table>
+
+<h2 id="dessert">3. 디저트(DESSERT) 테마</h2>
+<h3>등급별 합계</h3>
+<table>
+  <tr><th>등급</th><th style="width:26%">친구 수</th><th style="width:28%">확률 합계</th></tr>
+  <tr data-theme="dessert" data-grade="common" data-percent="48"><td>COMMON (일반)</td><td>6종</td><td>48%</td></tr>
+  <tr data-theme="dessert" data-grade="uncommon" data-percent="28"><td>UNCOMMON (고급)</td><td>4종</td><td>28%</td></tr>
+  <tr data-theme="dessert" data-grade="rare" data-percent="15"><td>RARE (희귀)</td><td>3종</td><td>15%</td></tr>
+  <tr data-theme="dessert" data-grade="legendary" data-percent="9"><td>LEGENDARY (전설)</td><td>2종</td><td>9%</td></tr>
+  <tr><td><strong>합계</strong></td><td>15종</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>친구별 확률</h3>
+<table>
+  <tr><th style="width:34%">등급</th><th>친구</th><th style="width:22%">확률</th></tr>
+  <tr data-theme="dessert" data-friend="mochi" data-percent="8"><td>COMMON (일반)</td><td>Mochi</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="macaron" data-percent="8"><td>COMMON (일반)</td><td>Macaron</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="ginger" data-percent="8"><td>COMMON (일반)</td><td>Ginger</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="puff" data-percent="8"><td>COMMON (일반)</td><td>Puff</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="scoop" data-percent="8"><td>COMMON (일반)</td><td>Scoop</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="pop" data-percent="8"><td>COMMON (일반)</td><td>Pop</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="flan" data-percent="7"><td>UNCOMMON (고급)</td><td>Flan</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="crescent" data-percent="7"><td>UNCOMMON (고급)</td><td>Crescent</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="waffle" data-percent="7"><td>UNCOMMON (고급)</td><td>Waffle</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="boba" data-percent="7"><td>UNCOMMON (고급)</td><td>Boba</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="shortcake" data-percent="5"><td>RARE (희귀)</td><td>Shortcake</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="soda" data-percent="5"><td>RARE (희귀)</td><td>Soda</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="crepe" data-percent="5"><td>RARE (희귀)</td><td>Crepe</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="sundae" data-percent="5"><td>LEGENDARY (전설)</td><td>Sundae</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="shake" data-percent="4"><td>LEGENDARY (전설)</td><td>Shake</td><td>4%</td></tr>
+</table>
+
+<h2 id="secret">4. 시크릿 친구 (조건을 채우면 확정으로 받음)</h2>
+<p>테마의 친구 15종을 모두 모으면 그 테마의 시크릿 친구 1종을 받습니다. 시크릿 친구는 뽑기로는 나오지 않습니다(뽑기 확률 0%). 받은 뒤에는 컬렉션에서 이름과 모습이 공개됩니다.</p>
+<table>
+  <tr><th style="width:26%">테마</th><th>조건</th><th style="width:30%">받는 친구</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-percent="0"><td>바다(OCEAN)</td><td>바다 친구 15종을 모두 모으기</td><td>바다 시크릿 친구 1종</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-percent="0"><td>디저트(DESSERT)</td><td>디저트 친구 15종을 모두 모으기</td><td>디저트 시크릿 친구 1종</td></tr>
+</table>
+
+<h2 id="limited">5. 기간·수량 한정</h2>
+<p>지금은 기간이나 수량이 한정된 뽑기가 없습니다. 한정 테마를 열면 제공 기간과 수량을 게임 안과 이 페이지에 적습니다.</p>
+
+<h2 id="changes">6. 확률을 바꿀 때</h2>
+<p>확률을 바꿀 때는 바뀌는 내용과 적용 시점을 미리 게임 안과 이 페이지에 알립니다. 긴급한 오류 수정처럼 미리 알리기 어려운 경우에는 고친 뒤 지체 없이 알립니다.</p>
+
+<h2 id="history">7. 변경 이력</h2>
+<table>
+  <tr><th style="width:30%">날짜</th><th>내용</th></tr>
+  <tr data-history="2026-09-26"><td>2026-09-26</td><td>확률 최초 공개: 바다·디저트 테마 머신의 친구별 확률(각 15종), 등급별 합계, 시크릿 친구를 받는 조건</td></tr>
+</table>
+
+<p>문의: <a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
+<p class="links"><a href="index.html">말랑픽 안내</a><a href="terms.html?lang=ko">이용약관</a><a href="privacy-policy.html?lang=ko">개인정보처리방침</a></p>
+</main>
+
+<!-- ==================== English ==================== -->
+<main id="en" class="section" lang="en">
+
+<h1>Malang Pick Probability Information</h1>
+<p class="updated">In effect: September 26, 2026 · First published: September 26, 2026</p>
+
+<p class="lead">Draws in <strong>Malang Pick</strong>, a mobile game by <strong>Tiger Room</strong>, are made with theme capsule machines and contain randomized items. As required by Article 33(2) of the Korean Game Industry Promotion Act and Annex 3-2 of its Enforcement Decree, and by the Google Play and App Store rules on randomized items, this page lists every friend a draw can give and its exact odds. The numbers come straight from the data the game draws with; they are exact, not rounded.</p>
+
+<h2 id="how">1. How a draw works</h2>
+<ul>
+  <li>Each theme has its own capsule machine. One draw gives one of that theme&#x27;s 15 friends.</li>
+  <li>A draw costs one ticket (tickets can be bought) or one rewarded ad. Both use the same odds.</li>
+  <li>Every draw is independent: the odds are always the same, whatever came before.</li>
+  <li>Friends you already have come at the same odds (duplicates).</li>
+  <li>There is no pity system: no friend is guaranteed after a number of draws.</li>
+  <li>Friend names are the names shown in the game.</li>
+</ul>
+
+<h2 id="ocean">2. Ocean (OCEAN) theme</h2>
+<h3>Odds by grade</h3>
+<table>
+  <tr><th>Grade</th><th style="width:26%">Friends</th><th style="width:28%">Total odds</th></tr>
+  <tr data-theme="ocean" data-grade="common" data-percent="48"><td>COMMON</td><td>6</td><td>48%</td></tr>
+  <tr data-theme="ocean" data-grade="uncommon" data-percent="28"><td>UNCOMMON</td><td>4</td><td>28%</td></tr>
+  <tr data-theme="ocean" data-grade="rare" data-percent="15"><td>RARE</td><td>3</td><td>15%</td></tr>
+  <tr data-theme="ocean" data-grade="legendary" data-percent="9"><td>LEGENDARY</td><td>2</td><td>9%</td></tr>
+  <tr><td><strong>Total</strong></td><td>15</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>Odds by friend</h3>
+<table>
+  <tr><th style="width:34%">Grade</th><th>Friend</th><th style="width:22%">Odds</th></tr>
+  <tr data-theme="ocean" data-friend="bubble" data-percent="8"><td>COMMON</td><td>Bubble</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="cove" data-percent="8"><td>COMMON</td><td>Cove</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="skim" data-percent="8"><td>COMMON</td><td>Skim</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="pebble" data-percent="8"><td>COMMON</td><td>Pebble</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="bubbles" data-percent="8"><td>COMMON</td><td>Bubbles</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="sand" data-percent="8"><td>COMMON</td><td>Sandy</td><td>8%</td></tr>
+  <tr data-theme="ocean" data-friend="shelly" data-percent="7"><td>UNCOMMON</td><td>Shelly</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="dash" data-percent="7"><td>UNCOMMON</td><td>Dash</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="twirl" data-percent="7"><td>UNCOMMON</td><td>Twirl</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="pinch" data-percent="7"><td>UNCOMMON</td><td>Pinch</td><td>7%</td></tr>
+  <tr data-theme="ocean" data-friend="pearl" data-percent="5"><td>RARE</td><td>Pearl</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="ripple" data-percent="5"><td>RARE</td><td>Ripple</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="inky" data-percent="5"><td>RARE</td><td>Inky</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="coral" data-percent="5"><td>LEGENDARY</td><td>Coral</td><td>5%</td></tr>
+  <tr data-theme="ocean" data-friend="penguin" data-percent="4"><td>LEGENDARY</td><td>Pengu</td><td>4%</td></tr>
+</table>
+
+<h2 id="dessert">3. Dessert (DESSERT) theme</h2>
+<h3>Odds by grade</h3>
+<table>
+  <tr><th>Grade</th><th style="width:26%">Friends</th><th style="width:28%">Total odds</th></tr>
+  <tr data-theme="dessert" data-grade="common" data-percent="48"><td>COMMON</td><td>6</td><td>48%</td></tr>
+  <tr data-theme="dessert" data-grade="uncommon" data-percent="28"><td>UNCOMMON</td><td>4</td><td>28%</td></tr>
+  <tr data-theme="dessert" data-grade="rare" data-percent="15"><td>RARE</td><td>3</td><td>15%</td></tr>
+  <tr data-theme="dessert" data-grade="legendary" data-percent="9"><td>LEGENDARY</td><td>2</td><td>9%</td></tr>
+  <tr><td><strong>Total</strong></td><td>15</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>Odds by friend</h3>
+<table>
+  <tr><th style="width:34%">Grade</th><th>Friend</th><th style="width:22%">Odds</th></tr>
+  <tr data-theme="dessert" data-friend="mochi" data-percent="8"><td>COMMON</td><td>Mochi</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="macaron" data-percent="8"><td>COMMON</td><td>Macaron</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="ginger" data-percent="8"><td>COMMON</td><td>Ginger</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="puff" data-percent="8"><td>COMMON</td><td>Puff</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="scoop" data-percent="8"><td>COMMON</td><td>Scoop</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="pop" data-percent="8"><td>COMMON</td><td>Pop</td><td>8%</td></tr>
+  <tr data-theme="dessert" data-friend="flan" data-percent="7"><td>UNCOMMON</td><td>Flan</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="crescent" data-percent="7"><td>UNCOMMON</td><td>Crescent</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="waffle" data-percent="7"><td>UNCOMMON</td><td>Waffle</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="boba" data-percent="7"><td>UNCOMMON</td><td>Boba</td><td>7%</td></tr>
+  <tr data-theme="dessert" data-friend="shortcake" data-percent="5"><td>RARE</td><td>Shortcake</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="soda" data-percent="5"><td>RARE</td><td>Soda</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="crepe" data-percent="5"><td>RARE</td><td>Crepe</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="sundae" data-percent="5"><td>LEGENDARY</td><td>Sundae</td><td>5%</td></tr>
+  <tr data-theme="dessert" data-friend="shake" data-percent="4"><td>LEGENDARY</td><td>Shake</td><td>4%</td></tr>
+</table>
+
+<h2 id="secret">4. Secret friends (granted for sure on a condition)</h2>
+<p>Collect all 15 friends of a theme and you receive that theme&#x27;s secret friend. Secret friends never come from a draw (0% draw odds). Its name and look appear in your collection once you have it.</p>
+<table>
+  <tr><th style="width:26%">Theme</th><th>Condition</th><th style="width:30%">You receive</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-percent="0"><td>Ocean</td><td>Collect all 15 Ocean friends</td><td>The Ocean secret friend</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-percent="0"><td>Dessert</td><td>Collect all 15 Dessert friends</td><td>The Dessert secret friend</td></tr>
+</table>
+
+<h2 id="limited">5. Limited time or quantity</h2>
+<p>There are no draws limited in time or quantity at the moment. A limited theme would show its period and quantity in the game and on this page.</p>
+
+<h2 id="changes">6. When the odds change</h2>
+<p>Before the odds change, we post what changes and from when, in the game and on this page. Urgent error fixes that cannot be announced in advance are posted without delay afterwards.</p>
+
+<h2 id="history">7. Change history</h2>
+<table>
+  <tr><th style="width:30%">Date</th><th>Change</th></tr>
+  <tr data-history="2026-09-26"><td>2026-09-26</td><td>First publication: per-friend odds for the 15 friends of the Ocean and Dessert machines, grade totals and the secret friend condition</td></tr>
+</table>
+
+<p>Contact: <a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
+<p class="links"><a href="index.html">Malang Pick</a><a href="terms.html?lang=en">Terms of Service</a><a href="privacy-policy.html?lang=en">Privacy Policy</a></p>
+</main>
+
+<footer>&copy; 2026 Tiger Room. All rights reserved.</footer>
+<script src="assets/lang.js"></script>
+</body>
+</html>
