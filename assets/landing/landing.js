@@ -1,5 +1,6 @@
-// Malang Pick landing (2026-10-08): Korean / English text, the header over the sky, nothing else.
-// Language: ?lang=ko|en first (shareable), then the visitor's last choice, then the browser language (Korean only for ko-*).
+// Malang Pick landing (2026-10-08): Korean / English / Japanese text (ja 2026-10-09, the Japan release), the header over the sky.
+// Language: ?lang=ko|en|ja first (shareable), then the visitor's last choice, then the browser language (ko-* Korean, ja-* Japanese).
+// Japanese never describes how the secret friend is won (Japan uses the draw-count ceiling, not completion; Builds/japan-launch-20261007).
 (function () {
   var T = {
     ko: {
@@ -20,7 +21,7 @@
       friends_title: '누가 기다리고 있을까요?', friends_sub: '테마마다 15명의 친구와 숨은 시크릿 친구가 있어요. 나머지는 캡슐을 열어서 만나 보세요!',
       tag_dessert: '디저트', tag_ocean: '바다', screens_title: '미리 보기',
       final_title: '매일 받는 무료 티켓으로 새 친구를 만나 보세요!', foot_name: '말랑말랑 말랑픽: ASMR',
-      l_privacy: '개인정보처리방침', l_terms: '이용약관', l_prob: '확률 정보', l_delete: '계정 삭제 안내', contact: '문의',
+      l_privacy: '개인정보처리방침', l_terms: '이용약관', l_prob: '확률 정보', l_delete: '계정 삭제 안내', l_tokushoho: '일본 특정상거래법 표기', contact: '문의',
       company: '타이거룸 · 사업자등록번호 629-25-02059 · 서울특별시 서초구 매헌로 16'
     },
     en: {
@@ -41,8 +42,29 @@
       friends_title: 'Who\u2019s waiting for you?', friends_sub: 'Every theme has 15 friends and a hidden secret one. Open capsules to meet the rest!',
       tag_dessert: 'Dessert', tag_ocean: 'Ocean', screens_title: 'A peek inside',
       final_title: 'Use your free daily tickets to meet new squishy friends!', foot_name: 'Malang Pick: ASMR',
-      l_privacy: 'Privacy Policy', l_terms: 'Terms of Service', l_prob: 'Probability', l_delete: 'Account Deletion', contact: 'Contact',
+      l_privacy: 'Privacy Policy', l_terms: 'Terms of Service', l_prob: 'Probability', l_delete: 'Account Deletion', l_tokushoho: 'Japan: Specified Commercial Transactions', contact: 'Contact',
       company: 'Tiger Room · Business No. 629-25-02059 · 16 Maeheon-ro, Seocho-gu, Seoul, Korea'
+    },
+    ja: {
+      title: 'マランピック：ぷにぷにスクイーズASMR · ガチャして、のばして、あつめよう！',
+      description: '指の動きにあわせてのび〜る、かわいいともだちと癒しのスクイーズASMR。「あおいうみ」から「スイーツカフェ」まで、ガチャでともだちをお迎えしてコレクションしよう。毎日もらえる無料チケットで遊べます。',
+      skip: '本文へスキップ', brand: 'マランピック', nav_play: 'あそび', nav_friends: 'ともだち', nav_screens: 'プレビュー', get_short: 'ダウンロード',
+      hero_eyebrow: '指先でのび〜る、ぷにぷにASMR', hero_title: 'ガチャして、のばして、あつめよう！',
+      hero_desc: '指の動きにあわせてのび〜る、かわいいともだちと気持ちいい音。「あおいうみ」から「スイーツカフェ」まで、今日はどのともだちに会えるかな？',
+      get_small: '無料ダウンロード', get_big: 'Google Play で手に入れよう', cta_note: '毎日無料チケット · Android',
+      f1_title: 'のび〜るスクイーズASMR',
+      f1_desc: '指にあわせてのびる、かわいいともだち！ ひっぱって、おして、そっとはなしてみて。ぷるんと戻る体と気持ちいい音が、指先にそのままついてきます。',
+      f1_b1: '2本の指でのび〜る', f1_b2: 'ともだちごとにちがう手ざわりと音', f1_b3: 'ひろばでともだちといっしょに遊ぶ',
+      f2_title: 'どのともだちが出るかな？',
+      f2_desc: 'ガチャマシンのレバーを回すとドキドキ！ だれが出るかは開けてのお楽しみ。好きなテーマのガチャで、ともだちをお迎えしよう。',
+      chip_ocean: 'あおいうみ', chip_dessert: 'スイーツカフェ', chip_soon: '新しいテーマも追加予定', secret_badge: 'シークレット登場！',
+      f3_title: 'コツコツ集める、わたしだけのコレクション',
+      f3_desc: 'お迎えしたともだちとは、いつでもまた遊べます。テーマごとに、かくれたシークレットのともだちもいるよ！',
+      friends_title: 'だれが待っているかな？', friends_sub: 'テーマごとに15人のともだちと、かくれたシークレットのともだちがいます。ほかの子には、カプセルを開けて会いに行こう！',
+      tag_dessert: 'スイーツ', tag_ocean: 'うみ', screens_title: 'プレビュー',
+      final_title: '毎日もらえる無料チケットで、新しいともだちに会いに行こう！', foot_name: 'マランピック：ぷにぷにスクイーズASMR',
+      l_privacy: 'プライバシーポリシー', l_terms: '利用規約', l_prob: '提供割合', l_delete: 'アカウント削除のご案内', l_tokushoho: '特定商取引法に基づく表記', contact: 'お問い合わせ',
+      company: 'Tiger Room（タイガールーム） · 事業者登録番号 629-25-02059 · 大韓民国ソウル特別市瑞草区梅軒路16'
     }
   };
   var KEY = 'malangpick.lang';
@@ -50,10 +72,11 @@
   function remember(lang) { try { localStorage.setItem(KEY, lang); } catch (e) { /* private mode */ } }
   function pick() {
     var q = new URLSearchParams(location.search).get('lang');
-    if (q === 'ko' || q === 'en') return q;
-    var s = stored(); if (s === 'ko' || s === 'en') return s;
+    if (q === 'ko' || q === 'en' || q === 'ja') return q;
+    var s = stored(); if (s === 'ko' || s === 'en' || s === 'ja') return s;
     var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
-    return String(langs[0] || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+    var first = String(langs[0] || '').toLowerCase();
+    return first.indexOf('ko') === 0 ? 'ko' : first.indexOf('ja') === 0 ? 'ja' : 'en';
   }
   function apply(lang) {
     var d = T[lang]; document.documentElement.lang = lang; document.title = d.title;
