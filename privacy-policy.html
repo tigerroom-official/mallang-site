@@ -36,7 +36,7 @@
   <tr><td>접속 · 보안 정보 (모든 이용자, 자동)</td><td>IP 주소, 요청 시각과 요청 주소, 앱 · 기기 종류(사용자 에이전트), 앱 버전, 앱 무결성 확인 정보(Firebase App Check 토큰, Google Play Integrity 확인 자료)</td><td>서버(Firebase)와 콘텐츠 전송(Cloudflare)을 이용할 때 자동 생성</td></tr>
   <tr><td>사용통계 (선택, 18세 이상 동의 시)</td><td>화면 조회, 놀이 · 뽑기 · 확률표 보기 · 광고 · 결제 · 콘텐츠 다운로드 이벤트, 결제 금액 · 통화, 광고 노출 수익, 성능(프레임률, 기기 모델, 그래픽 방식), 오류 종류와 위치(오류 메시지 제외), 네트워크 종류(와이파이 · 모바일), 이용자 속성(앱 언어, 소리 설정, 보유 친구 수 구간, 결제 여부와 첫 결제일, Google 연결 여부, 광고 시청 횟수 구간, 시크릿 받는 방식과 판정 근거 · 국가), 기기 모델 · OS · 앱 버전, 앱 인스턴스 ID, 게임 계정 식별자(가명), IP 주소로 추정한 대략적 위치(국가 · 도시 수준)</td><td>앱 이용 중 자동 수집(Firebase Analytics). 광고 식별자는 수집하지 않습니다.</td></tr>
   <tr><td>오류 보고 (선택, 18세 이상 동의 시)</td><td>앱 충돌 · 응답 없음 · 오류 기록(스택 트레이스, 오류 메시지), 기기 모델 · OS 버전 등 기기 상태, 앱 버전 · 빌드 번호 · 데이터 버전, Crashlytics 설치 UUID, Firebase 설치 ID. 게임 계정 식별자는 붙이지 않습니다.</td><td>오류가 생겼을 때 자동 수집(Firebase Crashlytics)</td></tr>
-  <tr><td>광고 (13세 이상, 자동)</td><td>광고 식별자(AAID), 앱 세트 ID, 광고 조회 · 탭 · 시청 · 보상 기록, 앱과 광고 SDK의 성능 정보, IP 주소로 추정한 대략적 위치. 18세 이상은 게시자 퍼스트 파티 ID도 사용</td><td>앱을 켠 뒤 광고를 미리 불러올 때와 보상형 광고를 볼 때(Google AdMob). 유럽 · 영국 · 스위스에서는 Google 동의 화면의 선택도 처리</td></tr>
+  <tr><td>광고 (자동)</td><td>광고 식별자(AAID), 앱 세트 ID, 광고 조회 · 탭 · 시청 · 보상 기록, 앱과 광고 SDK의 성능 정보, IP 주소로 추정한 대략적 위치. 18세 이상은 게시자 퍼스트 파티 ID도 사용. 13세 미만의 광고 요청은 아동 대상으로 표시해 광고 식별자를 보내지 않음</td><td>앱을 켠 뒤 광고를 미리 불러올 때와 보상형 광고를 볼 때(Google AdMob). 유럽 · 영국 · 스위스에서는 Google 동의 화면의 선택도 처리</td></tr>
   <tr><td>문의와 운영 처리</td><td>이메일 주소나 전화번호, 문의 내용, 이용자가 알려 준 주문번호 · PID, 운영자가 티켓을 지급 · 회수하거나 다른 계정으로 옮긴 기록(대상 계정 식별자 · PID, 수량, 사유, 처리 시각)</td><td>이용자가 이메일 · 전화로 문의하거나 운영자가 문의를 처리할 때</td></tr>
 </table>
 <p>회사는 이름을 직접 입력받지 않으며 주소, 정확한 위치, 주소록, 사진 · 파일, 마이크 · 카메라 정보를 수집하지 않습니다. 상점에서 국가에 맞는 환불 안내를 보여 주려고 Google Play 결제 국가를 기기에서 확인하며, 이 확인 결과는 저장하거나 보내지 않습니다. 이와 별도로 시크릿 받는 방식을 정하려고 위 '국가 · 지역 판정' 정보를 서버로 보냅니다(2번).</p>
@@ -46,7 +46,7 @@
   <tr><th style="width:22%">구분</th><th>13세 미만 (제한 모드)</th><th>13~17세</th><th>18세 이상</th></tr>
   <tr><td>뽑기 · 수집 · 놀이터, 매일 무료 티켓</td><td>이용</td><td>이용</td><td>이용</td></tr>
   <tr><td>서버 게임 기록</td><td>게임 운영에 필요한 범위만 (11번)</td><td>처리</td><td>처리</td></tr>
-  <tr><td>보상형 광고</td><td>없음. 광고 SDK를 시작하지 않습니다.</td><td>맞춤이 아닌 광고만. Google의 청소년 광고 보호(Teen), 광고 콘텐츠 등급 G 이하, 게시자 퍼스트 파티 ID 끔</td><td>맞춤 광고 가능(유럽 · 영국 · 스위스는 Google 동의 화면에서 고른 대로), 광고 콘텐츠 등급 PG 이하, 게시자 퍼스트 파티 ID 사용</td></tr>
+  <tr><td>보상형 광고</td><td>맞춤이 아닌 어린이용 광고만. Google의 아동 대상 처리(광고 식별자를 보내지 않음), 광고 콘텐츠 등급 G 이하, 게시자 퍼스트 파티 ID 끔</td><td>맞춤이 아닌 광고만. Google의 청소년 광고 보호(Teen), 광고 콘텐츠 등급 G 이하, 게시자 퍼스트 파티 ID 끔</td><td>맞춤 광고 가능(유럽 · 영국 · 스위스는 Google 동의 화면에서 고른 대로), 광고 콘텐츠 등급 PG 이하, 게시자 퍼스트 파티 ID 사용</td></tr>
   <tr><td>유료 결제(상점)</td><td>없음</td><td>가능 (Google Play)</td><td>가능 (Google Play)</td></tr>
   <tr><td>Google 계정 연결</td><td>없음</td><td>없음</td><td>선택</td></tr>
   <tr><td>사용통계 · 오류 보고</td><td>보내지 않음</td><td>보내지 않음</td><td>선택 ('동의하고 시작'을 누른 경우. 설정에서 하나씩 끔)</td></tr>
@@ -62,7 +62,7 @@
   <tr><td>유료 티켓 결제 확인과 지급, 중복 지급 방지, 환불 · 취소 시 회수, 결제 문의 · 환불 · 분쟁 처리</td><td>계약 이행, 법령상 의무 (「전자상거래 등에서의 소비자보호에 관한 법률」)</td></tr>
   <tr><td>연령에 맞는 보호: 13세 미만 제한 모드, 18세 미만의 맞춤 광고 · 계정 연결 · 통계 제한</td><td>법령 준수 (생년월일은 기기에서만 처리)</td></tr>
   <tr><td>보안과 부정 이용 방지: 앱 무결성 확인, 서버 접속 기록, 하루 광고 뽑기 한도, 변조 · 중복 요청 차단</td><td>계약 이행, 회사의 정당한 이익 (같은 항 제6호)</td></tr>
-  <tr><td>광고 게재 (13세 이상): 보상형 광고와 보상 지급, 광고 빈도 제한 · 성과 측정 · 부정 방지, 18세 이상 맞춤 광고</td><td>이용자가 고른 보상형 광고 제공. 맞춤 광고는 기기의 광고 ID 설정과 지역별 동의에 따름 (10번)</td></tr>
+  <tr><td>광고 게재: 보상형 광고와 보상 지급, 광고 빈도 제한 · 성과 측정 · 부정 방지, 18세 이상 맞춤 광고(13세 미만은 맞춤이 아닌 어린이용 광고만)</td><td>이용자가 고른 보상형 광고 제공. 맞춤 광고는 기기의 광고 ID 설정과 지역별 동의에 따름 (10번)</td></tr>
   <tr><td>서비스 개선 (18세 이상 선택): 이용 통계, 성능 · 오류 분석, 결제 · 광고 수익과 유입 경로 분석</td><td>동의 (같은 항 제1호). 언제든 철회할 수 있습니다.</td></tr>
   <tr><td>시크릿 친구 받는 방식 결정: 일본 Google Play 계정은 천장 방식(테마별 뽑기 횟수), 그 밖은 완성 방식. 국가 · 지역 판정, 방식의 고정과 변경, 횟수 집계</td><td>계약 이행, 법령 준수(일본 「경품표시법」의 카드 맞추기(컴플리트 가챠) 금지 대응)</td></tr>
   <tr><td>일본 Google Play에서 산 유료 티켓의 미사용 잔액 파악</td><td>법령 준수(일본 「자금결제에 관한 법률」 대응)</td></tr>
@@ -85,14 +85,14 @@
 
 <h2 id="third-party">4. 개인정보의 제3자 제공</h2>
 <p>회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만 법령에 특별한 규정이 있는 경우는 예외로 합니다.</p>
-<p>13세 이상 이용자의 앱에서는 Google(AdMob)의 광고 SDK가 광고 식별자, 광고 조회 기록, IP 주소로 추정한 대략적 위치 등을 직접 수집해 광고 게재, 분석, 부정 방지에 쓰며, 18세 이상 이용자의 정보는 Google 자신의 맞춤 광고 목적으로도 처리할 수 있습니다. 13~17세의 광고 요청에는 맞춤 광고와 리마케팅을 끄도록 표시합니다. 광고 ID에 기반한 맞춤 광고를 원하지 않으면 기기 설정에서 광고 ID를 삭제할 수 있습니다(재설정으로는 멈추지 않습니다. 10번).</p>
+<p>앱의 Google(AdMob) 광고 SDK가 광고 식별자(13세 미만은 제외), 광고 조회 기록, IP 주소로 추정한 대략적 위치 등을 직접 수집해 광고 게재, 분석, 부정 방지에 쓰며, 18세 이상 이용자의 정보는 Google 자신의 맞춤 광고 목적으로도 처리할 수 있습니다. 13~17세의 광고 요청에는 맞춤 광고와 리마케팅을 끄도록, 13세 미만의 광고 요청에는 아동 대상으로 표시합니다. 광고 ID에 기반한 맞춤 광고를 원하지 않으면 기기 설정에서 광고 ID를 삭제할 수 있습니다(재설정으로는 멈추지 않습니다. 10번).</p>
 
 <h2 id="processors">5. 처리 위탁과 국외 이전</h2>
 <p>회사는 앱 운영을 위해 아래와 같이 개인정보 처리를 맡깁니다. 서버의 게임 기록과 결제 기록은 Google Cloud 서울 리전(asia-northeast3)에 저장합니다. 로그인 인증, 앱 무결성 확인, 선택 사용통계 · 오류 보고, 광고, 콘텐츠 전송, 운영 도구를 위해서는 개인정보가 국외로 이전될 수 있습니다.</p>
 <table>
   <tr><th style="width:24%">수탁자</th><th>위탁 업무</th><th style="width:28%">처리 위치</th></tr>
   <tr><td>Google LLC (Firebase · Google Cloud)</td><td>게임 계정 인증(Firebase Authentication), 서버 게임 기록 · 뽑기 · 결제 확인(Cloud Firestore · Cloud Functions), 앱 무결성 확인(Firebase App Check · Google Play Integrity), 서버 요청 기록(Cloud Logging), 선택 사용통계 · 오류 보고(Firebase Analytics · Crashlytics)와 분석 사본(BigQuery), 문의 메일 수신 · 보관(Gmail)</td><td>대한민국(서울: Firestore · Functions · BigQuery), 미국(인증) 및 Google 데이터센터가 있는 국가</td></tr>
-  <tr><td>Google LLC (AdMob)</td><td>보상형 광고 게재 (13세 이상)</td><td>미국 등 Google 데이터센터가 있는 국가</td></tr>
+  <tr><td>Google LLC (AdMob)</td><td>보상형 광고 게재</td><td>미국 등 Google 데이터센터가 있는 국가</td></tr>
   <tr><td>Google LLC (Google Play 결제)</td><td>인앱 결제 처리, 결제 확인과 환불 내역 제공</td><td>미국 등 Google 데이터센터가 있는 국가</td></tr>
   <tr><td>Cloudflare, Inc.</td><td>게임 콘텐츠 · 소리 · 업데이트 데이터의 저장과 전달(malang.tigerroom.app), 서버 시각 확인</td><td>미국 및 Cloudflare 데이터센터가 있는 국가</td></tr>
   <tr><td>Contabo GmbH</td><td>운영 도구 서버 운영(운영자가 문의를 처리할 때 계정 상태를 조회하고 티켓을 지급 · 회수)</td><td>일본</td></tr>
@@ -151,7 +151,7 @@
 <ul>
   <li>게임 계정 식별자(Firebase 익명 계정 ID): 게임 계정 인증과 기록 유지 (모든 이용자)</li>
   <li>앱 인스턴스 ID · Firebase 설치 ID · Crashlytics 설치 UUID: 사용통계 · 오류 보고 (18세 이상이 고른 경우)</li>
-  <li>광고 식별자(AAID) · 앱 세트 ID: 광고 (13세 이상). 게시자 퍼스트 파티 ID는 18세 이상만</li>
+  <li>광고 식별자(AAID) · 앱 세트 ID: 광고 (광고 식별자는 13세 이상만). 게시자 퍼스트 파티 ID는 18세 이상만</li>
 </ul>
 <p><strong>거부 방법</strong>: 사용통계 · 오류 보고는 설정 → 개인정보 설정에서 끕니다. 광고 ID에 기반한 맞춤 광고는 Android 설정의 Google &gt; 광고(또는 개인정보 보호 &gt; 광고)에서 광고 ID를 삭제해 거부할 수 있습니다. 이전 버전의 Android에서는 같은 화면의 '광고 맞춤설정 선택 해제'를 켭니다. 광고 ID 재설정은 새 ID로 바꾸는 것이라 거부가 아니며, 삭제한 뒤에도 광고 자체는 표시됩니다. 유럽 · 영국 · 스위스에서는 설정 → 개인정보 설정 → 광고 개인정보 선택에서 다시 고를 수 있습니다.</p>
 <h3 id="behavioral">행태정보(맞춤 광고)</h3>
@@ -162,16 +162,16 @@
   <tr><td>방법</td><td>앱 안의 광고 SDK가 자동 수집</td></tr>
   <tr><td>목적</td><td>18세 이상 맞춤 광고, 광고 게재 · 빈도 제한 · 성과 측정 · 부정 방지</td></tr>
   <tr><td>보유 기간</td><td>Google의 정책에 따름</td></tr>
-  <tr><td>대상</td><td>맞춤 광고는 18세 이상만. 13~17세 광고 요청에는 맞춤 광고와 리마케팅을 끄도록 표시하고, 13세 미만에게는 광고를 보여 주지 않습니다.</td></tr>
+  <tr><td>대상</td><td>맞춤 광고는 18세 이상만. 13~17세 광고 요청에는 맞춤 광고와 리마케팅을 끄도록 표시하고, 13세 미만 광고 요청은 아동 대상으로 표시해 광고 식별자 없이 맞춤이 아닌 광고만 받습니다.</td></tr>
   <tr><td>거부</td><td>위의 거부 방법과 같습니다.</td></tr>
 </table>
 <p>이 안내 웹사이트(mallang.tigerroom.app)는 쿠키와 방문 분석 도구를 쓰지 않습니다. 사이트를 제공하는 GitHub(GitHub Pages)는 보안을 위해 방문자의 IP 주소를 기록합니다.</p>
 
 <h2 id="children">11. 아동의 개인정보 (13세 미만 제한 모드)</h2>
-<p>말랑픽은 13세 이상을 주 대상으로 하는 게임입니다. 처음 실행할 때 입력한 생년월일로 13세 미만이면 제한 모드로 이용합니다(이용 지역이 한국인 만 14세 미만도 같습니다. 아래 '한국의 만 14세 미만 아동'). 제한 모드에서는 매일 받는 무료 티켓으로 뽑기 · 수집 · 놀이터만 이용할 수 있고, 광고, 유료 결제(상점), 사용통계, 오류 보고, Google 계정 연결, 외부 웹 페이지 열기가 모두 꺼집니다.</p>
+<p>말랑픽은 13세 이상을 주 대상으로 하는 게임입니다. 처음 실행할 때 입력한 생년월일로 13세 미만이면 제한 모드로 이용합니다(이용 지역이 한국인 만 14세 미만도 같습니다. 아래 '한국의 만 14세 미만 아동'). 제한 모드에서는 매일 받는 무료 티켓으로 뽑기 · 수집 · 놀이터를 이용할 수 있고(보상형 광고는 맞춤이 아닌 어린이용 광고만 보입니다), 유료 결제(상점), 사용통계, 오류 보고, Google 계정 연결, 외부 웹 페이지 열기가 모두 꺼집니다.</p>
 <h3>제한 모드에서 처리하는 정보</h3>
 <ul>
-  <li>지속 식별자: 게임 계정 식별자(Firebase 익명 계정 ID), 서버와 콘텐츠 전송 과정의 IP 주소, 앱 무결성 확인 정보(App Check · Play Integrity)</li>
+  <li>지속 식별자: 게임 계정 식별자(Firebase 익명 계정 ID), 서버와 콘텐츠 전송 과정의 IP 주소, 앱 무결성 확인 정보(App Check · Play Integrity)</li>   <li>광고: Google(AdMob)에 아동 대상으로 표시해 보내는 광고 요청과 광고 조회 · 시청 · 보상 기록, IP 주소로 추정한 대략적 위치(광고 식별자는 보내지 않음)</li>
   <li>게임 기록: 무료 티켓 잔액, 일일 선물 받은 시각, 뽑기 기록, 테마별 뽑기 횟수, 보유 친구</li>
   <li>국가 · 지역 판정 정보(앱 0.4.167부터): Google Play 계정 국가, SIM과 통신망의 국가, 기기 언어 설정의 지역, 시간대와 판정 결과. 시크릿 받는 방식을 정하는 데만 씁니다. Google Play 결제 라이브러리는 국가 확인에만 쓰고 결제에는 쓰지 않습니다.</li>
   <li>기기에만 저장: 연령대와 만 14세 미만 여부, 이용 지역, 플레이어 번호(PID), 게임 설정과 기록</li>
@@ -179,7 +179,7 @@
 <p>이름, 이메일, 전화번호, 사진, 정확한 위치는 받지 않으며 생년월일은 보내거나 저장하지 않습니다.</p>
 <h3>내부 운영 목적으로만 씁니다</h3>
 <p>위 식별자는 미국 COPPA가 정한 "서비스 내부 운영 지원" 목적으로만 씁니다. 게임 계정 인증과 게임 기록 유지(아이가 모은 친구 보여 주기), 게임 콘텐츠 전달과 네트워크 통신, 티켓 중복 지급 · 뽑기 재시도 방지와 부정 이용 차단, 서비스 보안과 안정성 유지, 법령 준수(일본 「경품표시법」에 따른 시크릿 받는 방식 판정 포함)입니다.</p>
-<p>이 식별자로 아이에게 연락하거나, 행태 맞춤 광고를 하거나, 개인 프로필을 만들지 않으며 다른 목적으로 쓰지 않습니다. 이를 위해 13세 미만 기기에서는 광고 SDK, 결제, 사용통계, 오류 보고를 시작하지 않고, Google 계정 연결과 외부 링크를 막습니다. 서버에는 PID나 연락처 같은 다른 식별 정보를 두지 않으며, 이 정보는 5번의 Google(Firebase)과 Cloudflare만 서비스 제공을 위해 처리합니다.</p>
+<p>이 식별자로 아이에게 연락하거나, 행태 맞춤 광고를 하거나, 개인 프로필을 만들지 않으며 다른 목적으로 쓰지 않습니다. 이를 위해 13세 미만 기기에서는 결제, 사용통계, 오류 보고를 시작하지 않고 Google 계정 연결과 외부 링크를 막습니다. 광고는 Google(AdMob)에 아동 대상 요청으로만 보내며, 광고 식별자 · 맞춤 광고 · 리마케팅 없이 문맥 광고와 노출 빈도 제한에만 쓰입니다. 서버에는 PID나 연락처 같은 다른 식별 정보를 두지 않으며, 이 정보는 5번의 Google(Firebase)과 Cloudflare만 서비스 제공을 위해 처리합니다.</p>
 <p>이전 버전에서 Google 계정을 연결해 둔 기기에서 13세 미만으로 확인되면, 그 계정 정보와 기록은 지우거나 바꾸지 않고 게임 서버 연결을 시작하지 않습니다. 보호자는 12번 연락처로 그 계정의 열람이나 삭제를 요청할 수 있습니다.</p>
 <h3>아동 정보 보관 정책</h3>
 <ul>
@@ -199,7 +199,7 @@
 <h3>운영자 정보</h3>
 <p>Tiger Room(타이거룸, 개인사업자) · 서울특별시 서초구 매헌로 16, 371호 B06-C(양재동, 하이브랜드) 06771 · 전화 010-3934-4955 · 이메일 <a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
 <h3>한국의 만 14세 미만 아동</h3>
-<p>「개인정보 보호법」은 만 14세 미만 아동의 개인정보를 동의에 근거해 처리할 때 법정대리인의 동의를 받도록 합니다. 회사는 13세 미만 이용자에게 동의가 필요한 처리(광고, 결제, 사용통계, 오류 보고, Google 계정 연결)를 하지 않고 게임 제공에 필요한 처리만 합니다. 앱 0.4.167부터는 이용 지역이 한국인(앱 0.4.173부터는 Google Play 국가가 한국인) 만 14세 미만 이용자를 13세라도 제한 모드로 이용하게 하고, 기기에는 만 14세 미만이라는 표시만 저장합니다(생년월일은 저장하지 않음). 앱 0.4.166까지는 만 13세 이용자가 13~17세 기준에 따라 맞춤이 아닌 광고와 결제를 이용할 수 있습니다. 미성년자의 결제 취소는 이용약관과 상점 안내를 따릅니다.</p>
+<p>「개인정보 보호법」은 만 14세 미만 아동의 개인정보를 동의에 근거해 처리할 때 법정대리인의 동의를 받도록 합니다. 회사는 13세 미만 이용자에게 동의가 필요한 처리(맞춤 광고, 결제, 사용통계, 오류 보고, Google 계정 연결)를 하지 않습니다. 보상형 광고는 광고 식별자를 쓰지 않는 맞춤이 아닌 광고만 보여 줍니다. 앱 0.4.167부터는 이용 지역이 한국인(앱 0.4.173부터는 Google Play 국가가 한국인) 만 14세 미만 이용자를 13세라도 제한 모드로 이용하게 하고, 기기에는 만 14세 미만이라는 표시만 저장합니다(생년월일은 저장하지 않음). 앱 0.4.166까지는 만 13세 이용자가 13~17세 기준에 따라 맞춤이 아닌 광고와 결제를 이용할 수 있습니다. 미성년자의 결제 취소는 이용약관과 상점 안내를 따릅니다.</p>
 
 <h2 id="contact">12. 운영자, 개인정보 보호책임자와 문의처</h2>
 <ul>
@@ -222,7 +222,7 @@
 
 <h2 id="changes">14. 방침의 변경</h2>
 <p>이 방침을 바꾸면 시행 7일 전에 이 페이지와 앱 공지로 알립니다. 이용자의 권리에 중요한 변경은 30일 전에 알립니다.</p>
-<p>이번 개정(2026년 10월 ◯일 시행)에서는 13세 이상(한국은 만 14세 이상) 계정의 PID를 문의할 때 계정을 찾을 수 있도록 서버에 기록하는 처리와, 이용자의 요청에 따라 운영자가 남은 유료 티켓을 이용자의 새 계정으로 옮기는 처리를 더했습니다.</p>
+<p>이번 개정(2026년 10월 ◯일 시행)에서는 13세 이상(한국은 만 14세 이상) 계정의 PID를 문의할 때 계정을 찾을 수 있도록 서버에 기록하는 처리와, 이용자의 요청에 따라 운영자가 남은 유료 티켓을 이용자의 새 계정으로 옮기는 처리를 더했습니다. 또 13세 미만(한국은 만 14세 미만) 이용자에게 맞춤이 아닌 어린이용 광고를 보여 주고(광고 식별자 미사용), 이용 지역을 Google Play 계정의 국가로 정하도록 바꿨습니다.</p>
 <p>직전 개정(2026년 10월 7일 시행)은 정식 출시 전에 앱의 실제 처리에 맞춰 연령대별 처리, 서버 뽑기 기록, 선택 사용통계 · 오류 보고, 앱 무결성 확인, 콘텐츠 전송, 운영 도구, 13세 미만 제한 모드, 보관 기간과 운영자 정보를 고쳐 적은 것입니다. 같은 날 정식 출시 전에 국가 · 지역 판정과 시크릿 받는 방식, 테마별 뽑기 횟수, 결제 당시 Google Play 국가 · 지역, 일본 결제자 목록, 한국의 만 14세 미만 처리를 더하고, 맞춤 광고 거부 방법(광고 ID 재설정이 아니라 삭제)을 바로잡았습니다. 이전 방침은 2026년 9월 26일부터 시행했습니다.</p>
 
 <h2 id="regional">15. 지역별 추가 안내</h2>
@@ -258,7 +258,7 @@
   <tr><td>Connection and security data (all users, automatic)</td><td>IP address, request time and address, app and device type (user agent), app version, app integrity data (Firebase App Check tokens, Google Play Integrity verdict data)</td><td>Created automatically when the App uses our server (Firebase) and content delivery (Cloudflare)</td></tr>
   <tr><td>Usage analytics (optional, 18+ with consent)</td><td>Screen views; play, draw, odds-table, ad, purchase and content download events; purchase amount and currency; ad impression revenue; performance (frame rate, device model, graphics API); error type and location (no error messages); network type (Wi-Fi or mobile); user properties (app language, sound setting, friends-owned range, payer status and first purchase day, Google link status, ads-watched range, the secret rule with its basis and country); device model, OS and app version; app instance ID; game account identifier (pseudonymous); approximate location derived from the IP address (country/city level)</td><td>Collected automatically while you use the App (Firebase Analytics). The advertising ID is not collected.</td></tr>
   <tr><td>Crash reports (optional, 18+ with consent)</td><td>Crash, freeze and error records (stack traces, error messages), device state such as model and OS version, app version, build number and data version, Crashlytics installation UUID, Firebase installation ID. The game account identifier is not attached.</td><td>Collected automatically when an error occurs (Firebase Crashlytics)</td></tr>
-  <tr><td>Ads (13+, automatic)</td><td>Advertising ID (AAID), app set ID, ad view, tap, play and reward records, app and ad SDK performance data, approximate location estimated from the IP address. For users 18 and older, the publisher first-party ID is also used.</td><td>When the App preloads an ad after launch and when you watch a rewarded ad (Google AdMob). In the EEA, the UK and Switzerland, your choices on Google's consent screen are also processed.</td></tr>
+  <tr><td>Ads (automatic)</td><td>Advertising ID (AAID), app set ID, ad view, tap, play and reward records, app and ad SDK performance data, approximate location estimated from the IP address. For users 18 and older, the publisher first-party ID is also used. Ad requests for users under 13 are marked child-directed and carry no advertising ID.</td><td>When the App preloads an ad after launch and when you watch a rewarded ad (Google AdMob). In the EEA, the UK and Switzerland, your choices on Google's consent screen are also processed.</td></tr>
   <tr><td>Support and operations</td><td>Email address or phone number, your message, the order number or PID you give us, and records of tickets an operator granted, took back or moved to another account (target account identifier and PID, amount, reason, time)</td><td>When you contact us by email or phone, or when an operator handles your request</td></tr>
 </table>
 <p>We do not ask you to type your name, and we do not collect addresses, precise location, contacts, photos or files, or microphone or camera data. To show the refund notice for your country in the shop, the App reads your Google Play billing country on the device; that reading is neither stored nor sent. Separately, to set how you receive secret friends, the App sends the "Country and region check" data above to our server (section 2).</p>
@@ -268,7 +268,7 @@
   <tr><th style="width:22%">Feature</th><th>Under 13 (restricted mode)</th><th>13 to 17</th><th>18 and older</th></tr>
   <tr><td>Draws, collection, playground, daily free tickets</td><td>Available</td><td>Available</td><td>Available</td></tr>
   <tr><td>Server game records</td><td>Only what the game needs to run (section 11)</td><td>Processed</td><td>Processed</td></tr>
-  <tr><td>Rewarded ads</td><td>None. The ad SDK is never started.</td><td>Non-personalized ads only, Google's teen ad protections, content rating G or lower, publisher first-party ID off</td><td>Personalized ads possible (in the EEA, the UK and Switzerland as chosen on Google's consent screen), content rating PG or lower, publisher first-party ID on</td></tr>
+  <tr><td>Rewarded ads</td><td>Non-personalized, child-safe ads only: Google's child-directed treatment (no advertising ID), content rating G or lower, publisher first-party ID off</td><td>Non-personalized ads only, Google's teen ad protections, content rating G or lower, publisher first-party ID off</td><td>Personalized ads possible (in the EEA, the UK and Switzerland as chosen on Google's consent screen), content rating PG or lower, publisher first-party ID on</td></tr>
   <tr><td>Purchases (shop)</td><td>None</td><td>Available (Google Play)</td><td>Available (Google Play)</td></tr>
   <tr><td>Google account link</td><td>None</td><td>None</td><td>Optional</td></tr>
   <tr><td>Usage analytics and crash reports</td><td>Never sent</td><td>Never sent</td><td>Optional (if you tap "Agree and start"; each can be turned off in Settings)</td></tr>
@@ -284,7 +284,7 @@
   <tr><td>Verifying and granting paid tickets, preventing double grants, taking tickets back after refunds or cancellations, handling purchase questions, refunds and disputes</td><td>Performance of a contract; legal obligation (Act on the Consumer Protection in Electronic Commerce)</td></tr>
   <tr><td>Age-appropriate protection: restricted mode under 13; limits on personalized ads, account linking and analytics under 18</td><td>Legal compliance (the date of birth is processed only on the device)</td></tr>
   <tr><td>Security and abuse prevention: app integrity checks, server access records, the daily ad draw limit, blocking tampered and duplicate requests</td><td>Performance of a contract; our legitimate interests (PIPA Article 15(1)6)</td></tr>
-  <tr><td>Showing ads (13+): rewarded ads and their rewards, frequency capping, measurement and fraud prevention, personalized ads for users 18 and older</td><td>Rewarded ads you choose to watch. Personalized ads follow your device's advertising ID settings and regional consent (section 10)</td></tr>
+  <tr><td>Showing ads: rewarded ads and their rewards, frequency capping, measurement and fraud prevention, personalized ads for users 18 and older (non-personalized, child-safe ads only under 13)</td><td>Rewarded ads you choose to watch. Personalized ads follow your device's advertising ID settings and regional consent (section 10)</td></tr>
   <tr><td>Improving the service (18+, optional): usage statistics, performance and error analysis, purchase and ad revenue and acquisition analysis</td><td>Consent (PIPA Article 15(1)1), which you can withdraw at any time</td></tr>
   <tr><td>Setting how secret friends are received: a draw-count ceiling for Japanese Google Play accounts and theme completion elsewhere; the country and region check, fixing and changing the rule, counting draws</td><td>Performance of a contract; legal compliance (Japan's Act against Unjustifiable Premiums and Misleading Representations, which prohibits "complete gacha" prizes)</td></tr>
   <tr><td>Tracking the unused balance of paid tickets bought on Google Play in Japan</td><td>Legal compliance (Japan's Payment Services Act)</td></tr>
@@ -307,14 +307,14 @@
 
 <h2 id="en-third-party">4. Sharing With Third Parties</h2>
 <p>We do not provide your personal information to third parties, except where the law specifically requires it.</p>
-<p>For users 13 and older, Google's (AdMob) ad SDK in the App collects the advertising ID, ad view records, the approximate location estimated from the IP address and similar data directly, for ad serving, analytics and fraud prevention; for users 18 and older, Google may also process it for its own personalized advertising. Ad requests for users 13 to 17 are marked so that personalized ads and remarketing are turned off. To opt out of personalized ads based on the advertising ID, delete your advertising ID in the device settings (resetting it does not opt you out; section 10).</p>
+<p>Google's (AdMob) ad SDK in the App collects the advertising ID (not for users under 13), ad view records, the approximate location estimated from the IP address and similar data directly, for ad serving, analytics and fraud prevention; for users 18 and older, Google may also process it for its own personalized advertising. Ad requests for users 13 to 17 are marked so that personalized ads and remarketing are turned off, and those for users under 13 are marked child-directed. To opt out of personalized ads based on the advertising ID, delete your advertising ID in the device settings (resetting it does not opt you out; section 10).</p>
 
 <h2 id="en-processors">5. Processors and International Transfer</h2>
 <p>We entrust processing to the service providers below. Game records and purchase records on our server are stored in the Google Cloud Seoul region (asia-northeast3). Sign-in, app integrity checks, optional analytics and crash reports, ads, content delivery and our operations tool may involve transfer outside Korea.</p>
 <table>
   <tr><th style="width:24%">Processor</th><th>Task</th><th style="width:28%">Location</th></tr>
   <tr><td>Google LLC (Firebase, Google Cloud)</td><td>Game account sign-in (Firebase Authentication), server game records, draws and purchase verification (Cloud Firestore, Cloud Functions), app integrity checks (Firebase App Check, Google Play Integrity), server request logs (Cloud Logging), optional analytics and crash reports (Firebase Analytics, Crashlytics) and analysis copies (BigQuery), receiving and keeping support email (Gmail)</td><td>Korea (Seoul: Firestore, Functions, BigQuery), the United States (sign-in) and other countries with Google data centers</td></tr>
-  <tr><td>Google LLC (AdMob)</td><td>Rewarded ads (13+)</td><td>The United States and other countries with Google data centers</td></tr>
+  <tr><td>Google LLC (AdMob)</td><td>Rewarded ads</td><td>The United States and other countries with Google data centers</td></tr>
   <tr><td>Google LLC (Google Play Billing)</td><td>In-app purchases, purchase verification and refund lists</td><td>The United States and other countries with Google data centers</td></tr>
   <tr><td>Cloudflare, Inc.</td><td>Storing and delivering game content, sounds and update data (malang.tigerroom.app), server time checks</td><td>The United States and other countries with Cloudflare data centers</td></tr>
   <tr><td>Contabo GmbH</td><td>Running our operations tool server (an operator looks up an account and grants or takes back tickets when handling a request)</td><td>Japan</td></tr>
@@ -373,7 +373,7 @@
 <ul>
   <li>Game account identifier (Firebase anonymous account ID): game account sign-in and keeping records (all users)</li>
   <li>App instance ID, Firebase installation ID, Crashlytics installation UUID: analytics and crash reports (users 18 and older who choose them)</li>
-  <li>Advertising ID (AAID) and app set ID: ads (13+). The publisher first-party ID only for users 18 and older</li>
+  <li>Advertising ID (AAID) and app set ID: ads (the advertising ID only for users 13 and older). The publisher first-party ID only for users 18 and older</li>
 </ul>
 <p><strong>How to refuse</strong>: turn off analytics and crash reports in Settings → Privacy settings. To opt out of personalized ads based on the advertising ID, delete your advertising ID in Android Settings &gt; Google &gt; Ads (or Privacy &gt; Ads); on older Android versions, turn on "Opt out of Ads Personalization" on the same screen. Resetting the advertising ID only replaces it with a new one and is not an opt-out, and ads still appear after you delete it. In the EEA, the UK and Switzerland you can also choose again in Settings → Privacy settings → Ad privacy choices.</p>
 <h3 id="en-behavioral">Behavioral information (personalized ads)</h3>
@@ -384,16 +384,16 @@
   <tr><td>Method</td><td>Collected automatically by the ad SDK in the App</td></tr>
   <tr><td>Purposes</td><td>Personalized ads for users 18 and older; ad serving, frequency capping, measurement and fraud prevention</td></tr>
   <tr><td>Retention</td><td>Under Google's policies</td></tr>
-  <tr><td>Who</td><td>Personalized ads only for users 18 and older. Ad requests for users 13 to 17 are marked to turn off personalized ads and remarketing, and users under 13 see no ads.</td></tr>
+  <tr><td>Who</td><td>Personalized ads only for users 18 and older. Ad requests for users 13 to 17 are marked to turn off personalized ads and remarketing, and ad requests for users under 13 are marked child-directed (non-personalized ads only, no advertising ID).</td></tr>
   <tr><td>How to refuse</td><td>As described above.</td></tr>
 </table>
 <p>This website (mallang.tigerroom.app) uses no cookies or visitor analytics. GitHub, which hosts it (GitHub Pages), logs visitors' IP addresses for security purposes.</p>
 
 <h2 id="en-children">11. Children (Restricted Mode for Users Under 13)</h2>
-<p>Malang Pick is intended mainly for users 13 and older. If the date of birth entered at first launch shows the user is under 13, the App runs in restricted mode (so it does for users under 14 whose region is South Korea; see "Children under 14 in Korea" below). In restricted mode the child can only draw with daily free tickets, collect and use the playground; ads, purchases (the shop), usage analytics, crash reports, Google account linking and opening outside web pages are all off.</p>
+<p>Malang Pick is intended mainly for users 13 and older. If the date of birth entered at first launch shows the user is under 13, the App runs in restricted mode (so it does for users under 14 whose region is South Korea; see "Children under 14 in Korea" below). In restricted mode the child can only draw with daily free tickets, collect and use the playground (rewarded ads show non-personalized, child-safe ads only); purchases (the shop), usage analytics, crash reports, Google account linking and opening outside web pages are all off.</p>
 <h3>Information processed in restricted mode</h3>
 <ul>
-  <li>Persistent identifiers: the game account identifier (Firebase anonymous account ID), IP addresses seen by our server and content delivery, app integrity data (App Check, Play Integrity)</li>
+  <li>Persistent identifiers: the game account identifier (Firebase anonymous account ID), IP addresses seen by our server and content delivery, app integrity data (App Check, Play Integrity)</li>   <li>Ads: child-directed ad requests to Google (AdMob), ad view, play and reward records, the approximate location estimated from the IP address (no advertising ID)</li>
   <li>Game records: free ticket balance, daily gift time, draw history, draw counts by theme, friends owned</li>
   <li>Country and region check data (from app version 0.4.167): the Google Play account country, the SIM and network country, the region in the device language setting, the time zone and the result of the check. It is used only to set how secret friends are received. The Google Play Billing library is used only to read the country, never for purchases.</li>
   <li>Stored only on the device: age band and whether the user is under 14, region, player number (PID), game settings and records</li>
@@ -401,7 +401,7 @@
 <p>We do not collect the child's name, email, phone number, photos or precise location, and the date of birth is never sent or stored.</p>
 <h3>Used only for internal operations</h3>
 <p>We collect these persistent identifiers solely to provide support for the internal operations of the App, as defined by COPPA: authenticating the game account and keeping game records (showing the friends the child collected), delivering game content and performing network communications, preventing double ticket grants and repeated draws and blocking abuse, keeping the service secure and stable, and complying with the law (including setting the secret rule under Japan's premiums law).</p>
-<p>We do not use or disclose these identifiers to contact a specific child, for behavioral advertising, to build a profile, or for any other purpose. To ensure this, the App never starts the ad SDK, purchases, analytics or crash reporting for users under 13, and blocks Google account linking and outside links. Our server keeps no other identifying data such as a PID or contact details for these accounts, and only Google (Firebase) and Cloudflare (section 5) process this information to provide the service.</p>
+<p>We do not use or disclose these identifiers to contact a specific child, for behavioral advertising, to build a profile, or for any other purpose. To ensure this, the App never starts purchases, analytics or crash reporting for users under 13 and blocks Google account linking and outside links. Ads are requested from Google (AdMob) only as child-directed requests, without the advertising ID, personalized ads or remarketing, and are used only for contextual ads and frequency capping, which COPPA counts as support for internal operations. Our server keeps no other identifying data such as a PID or contact details for these accounts, and only Google (Firebase) and Cloudflare (section 5) process this information to provide the service.</p>
 <p>If a device on which a Google account was linked in an earlier version is confirmed to belong to a user under 13, the App leaves that account's information and records unchanged and does not connect to the game server. A parent can ask to review or delete that account using the contact in section 12.</p>
 <h3>Children's data retention policy</h3>
 <ul>
@@ -421,7 +421,7 @@
 <h3>Operator</h3>
 <p>Tiger Room (sole proprietorship) · Unit B06-C, Room 371, 16 Maeheon-ro, Seocho-gu, Seoul 06771, Republic of Korea · Phone +82-10-3934-4955 · Email <a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
 <h3>Children under 14 in Korea</h3>
-<p>Korea's PIPA requires a legal guardian's consent when personal information of a child under 14 is processed on the basis of consent. For users under 13 we do not carry out any processing that needs consent (ads, purchases, analytics, crash reports, Google account linking), only the processing needed to provide the game. From app version 0.4.167, users under 14 whose region is South Korea (from 0.4.173, whose Google Play country is South Korea) use restricted mode even at 13, and the device stores only a flag that the user is under 14 (never the date of birth). Up to app version 0.4.166, users aged 13 follow the App's 13-to-17 rules and can see non-personalized ads and make purchases. Cancellation of purchases by minors follows the Terms of Service and the shop notice.</p>
+<p>Korea's PIPA requires a legal guardian's consent when personal information of a child under 14 is processed on the basis of consent. For users under 13 we do not carry out any processing that needs consent (personalized ads, purchases, analytics, crash reports, Google account linking); rewarded ads show only non-personalized ads that use no advertising ID. From app version 0.4.167, users under 14 whose region is South Korea (from 0.4.173, whose Google Play country is South Korea) use restricted mode even at 13, and the device stores only a flag that the user is under 14 (never the date of birth). Up to app version 0.4.166, users aged 13 follow the App's 13-to-17 rules and can see non-personalized ads and make purchases. Cancellation of purchases by minors follows the Terms of Service and the shop notice.</p>
 
 <h2 id="en-contact">12. Operator, Privacy Officer and Contact</h2>
 <ul>
@@ -437,7 +437,7 @@
 
 <h2 id="en-changes">14. Changes</h2>
 <p>We announce changes to this policy on this page and in the App 7 days before they take effect, or 30 days before for changes that materially affect your rights.</p>
-<p>This revision (effective October ◯, 2026) adds recording the PID of accounts of users 13 or older (14 or older in Korea) on our server so we can find the account when you contact us, and an operator moving the remaining paid tickets to your new account when you ask us to.</p>
+<p>This revision (effective October ◯, 2026) adds recording the PID of accounts of users 13 or older (14 or older in Korea) on our server so we can find the account when you contact us, and an operator moving the remaining paid tickets to your new account when you ask us to. It also shows users under 13 (under 14 in Korea) non-personalized, child-safe ads (no advertising ID) and sets the region from the Google Play account's country.</p>
 <p>The previous revision (effective October 7, 2026) was made before the official launch to match what the App actually does: processing by age band, server draw records, optional analytics and crash reports, app integrity checks, content delivery, our operations tool, restricted mode for users under 13, retention periods and operator details. On the same day, before the launch, we added the country and region check and the secret rule, draw counts by theme, the Google Play country or region at the time of purchase, the list of Japanese purchasers and the handling of users under 14 in Korea, and corrected how to opt out of personalized ads (deleting the advertising ID, not resetting it). The previous policy took effect on September 26, 2026.</p>
 
 <h2 id="en-regional">15. Additional Information by Region</h2>
