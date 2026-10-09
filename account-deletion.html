@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>말랑픽 계정 삭제 안내 · Malang Pick Account Deletion</title>
+<title>말랑픽 계정 삭제 안내 · Malang Pick Account Deletion · マランピック アカウント削除のご案内</title>
 <meta name="description" content="Tiger Room 말랑픽(Malang Pick) 계정과 데이터 삭제 요청 방법">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<div class="lang-toggle" role="group" aria-label="언어 / Language">
+<div class="lang-toggle" role="group" aria-label="언어 / Language / 言語">
   <button type="button" data-lang="ko">한국어</button>
   <button type="button" data-lang="en">English</button>
+  <button type="button" data-lang="ja">日本語</button>
 </div>
 
 <main id="ko" class="section" lang="ko">
 <h1>말랑픽 계정 삭제 안내</h1>
-<p class="updated">Tiger Room · 말랑픽(Malang Pick) · 최종 수정: 2026년 10월 ◯일</p>
+<p class="updated">Tiger Room · 말랑픽(Malang Pick) · 최종 수정: 2026년 10월 10일</p>
 
 <h2>앱에서 바로 삭제</h2>
 <div class="box">
@@ -59,7 +60,7 @@
 
 <main id="en" class="section" lang="en">
 <h1>Malang Pick Account Deletion</h1>
-<p class="updated">Tiger Room · Malang Pick · Last updated: October ◯, 2026</p>
+<p class="updated">Tiger Room · Malang Pick · Last updated: October 10, 2026</p>
 
 <h2>Delete in the App</h2>
 <div class="box">
@@ -98,6 +99,51 @@
 <h2>For Parents (Users Under 13)</h2>
 <p>A parent can delete the account at once in Settings → Delete account on the child's device, or ask to review or delete the child's information by email or phone (+82-10-3934-4955). Because accounts of users under 13 keep no PID or contact details on our server, we may not be able to find the account without the child's device; records we cannot find are still deleted one year after the last use.</p>
 <p>Progress on your device is removed when you uninstall the App. See the <a href="privacy-policy.html?lang=en">Privacy Policy</a> for details.</p>
+</main>
+
+<!-- Draft 2026-10-07 (Builds/japan-launch-20261007, not published): the ko/en page of 2026-10-07 (mallang-site dd827aa) in Japanese, merged with
+     the Opus/Astra review (review/ja-store-web-decisions.md); "b219" lines are the same additions as privacy-policy section 8. The app opens this page with ?lang=ja from b219 (ShellAccountUI.OpenDeletionPage). -->
+<main id="ja" class="section" lang="ja">
+<h1>マランピック アカウント削除のご案内</h1>
+<p class="updated">Tiger Room · マランピック（Malang Pick） · 最終更新：2026年10月10日</p>
+
+<h2>アプリですぐに削除</h2>
+<div class="box">
+<p>アプリの設定 → アカウント削除で2回確認すると、サーバーのゲームアカウントと記録がすぐに削除され、この端末の記録も消去されます。ゲストアカウント、Google連携アカウント、13歳未満の方のアカウントのいずれも同じです。</p>
+</div>
+
+<h2>アプリを削除した場合：メールでお申し込み</h2>
+<div class="box">
+<ol>
+  <li><a href="mailto:tigerroom.official@gmail.com?subject=%E3%83%9E%E3%83%A9%E3%83%B3%E3%83%94%E3%83%83%E3%82%AF%20%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%E3%81%AE%E3%81%8A%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF">tigerroom.official@gmail.com</a>に、件名「マランピック アカウント削除のお申し込み」でメールをお送りください。</li>
+  <li>本文に、アカウントを探すための情報をお書きください。Google連携アカウントは連携したGoogleのメールアドレスを、購入したことのあるアカウントはGoogle Playの注文番号（GPA…）をお書きください。タイトル画面の下に表示されるプレイヤー番号（PID）がわかれば、あわせてお書きください。</li>
+  <li>ご本人の確認後、10日以内に削除し、結果をご返信します。</li>
+</ol>
+<p>Google連携をしたことがなく、購入したこともないゲストアカウントは、PIDで探します。PIDがサーバーに記録される前にだけアプリを使ったアカウント、13歳未満（韓国は満14歳未満）の方のアカウント、PIDがわからない場合は、端末がないと見つけられないことがあります。このような記録は、最後の利用から1年がたつと削除されます。アプリを削除する前に、アプリでアカウントを削除してください。</p>
+</div>
+
+<h2>削除される情報</h2>
+<ul>
+  <li>アカウント（ログイン）の情報：ゲストアカウントの識別子、サーバーに記録したPID、連携したGoogleアカウントの情報</li>
+  <li>サーバーのチケット・未所持確定チケットの残高、ガチャの記録、テーマごとのガチャの回数と国・地域の判定の結果<!-- b219 -->、持っているともだち、Google連携のバックアップ</li>
+  <li>日本の購入者の一覧に登録されたそのアカウントの情報（日本のGoogle Playで購入したアカウントだけ）<!-- b219 --></li>
+  <li>アプリで削除した場合は、この端末のゲームの記録</li>
+</ul>
+<p>削除すると元に戻せず、残っている有償チケットもいっしょに消えます。</p>
+
+<h2>保存したあとに破棄する情報</h2>
+<ul>
+  <li>購入・払い戻しの記録：運営会社の所在国である韓国の「電子商取引等における消費者保護に関する法律」にもとづき、5年間ほかの情報と分けて保存したあとに破棄します。</li>
+  <li>お問い合わせと運営上の処理の記録（お問い合わせのメール、運営者によるチケットの付与・回収の記録）：消費者の苦情・紛争の処理の記録として3年間保存したあとに破棄します。</li>
+  <li>利用統計（18歳以上の方が同意した場合）：Google Analyticsで最後の活動から14か月がたつと削除され、分析用のコピーも14か月後に削除します。より早い削除をご請求いただくこともできます。</li>
+  <li>エラーレポート（18歳以上の方が同意した場合）：Firebase Crashlyticsで90日後に削除されます。</li>
+  <li>サーバーのリクエストの記録：30日後に削除されます。</li>
+  <li>バックアップ：削除した情報は、Googleのバックアップシステムからも、最長でおよそ180日以内に消去されます。</li>
+</ul>
+
+<h2>保護者の方へ（13歳未満のお子さま）</h2>
+<p>保護者の方は、お子さまの端末でアプリを開き、設定 → アカウント削除からすぐに削除するか、上のメールまたは電話（+82-10-3934-4955）で、閲覧・削除をご請求いただけます。13歳未満の方のアカウントは、サーバーにPIDや連絡先を置かないため、端末がないと見つけられないことがあります。見つけられなかった記録も、最後の利用から1年がたつと削除されます。</p>
+<p>端末内の記録は、アプリを削除すると消去されます。くわしくは<a href="privacy-policy.html?lang=ja">プライバシーポリシー</a>をご覧ください。</p>
 </main>
 
 <footer>&copy; 2026 Tiger Room. All rights reserved.</footer>

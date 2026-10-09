@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>말랑픽 확률 정보 · Malang Pick Probability Information</title>
-<meta name="description" content="Tiger Room 말랑픽(Malang Pick) 뽑기 확률 정보 · Draw odds">
+<title>말랑픽 확률 정보 · Malang Pick Probability Information · マランピック 提供割合</title>
+<meta name="description" content="Tiger Room 말랑픽(Malang Pick) 뽑기 확률 정보 · Draw odds · ガチャの提供割合">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<div class="lang-toggle" role="group" aria-label="언어 / Language">
+<div class="lang-toggle" role="group" aria-label="언어 / Language / 言語">
   <button type="button" data-lang="ko">한국어</button>
   <button type="button" data-lang="en">English</button>
+  <button type="button" data-lang="ja">日本語</button>
 </div>
 
 <!-- Generated from the game data (catalog.json, creatures.json, odds-history.json) by make_probability_page.py in the
-     Malang Pick repository (Builds/probability-disclosure-20260926). Do not edit by hand: regenerate. -->
+     Malang Pick repository (Builds/probability-disclosure-20260926); the Japanese section by
+     Builds/japan-launch-20261007/tools/make_probability_page_ja.py. Do not edit by hand: regenerate. -->
 
 <!-- ==================== 한국어 ==================== -->
 <main id="ko" class="section" lang="ko">
@@ -102,6 +104,14 @@
   <tr data-theme="dessert" data-secret="1" data-percent="0"><td>디저트(DESSERT)</td><td>디저트 친구 15종을 모두 모으기</td><td>디저트 시크릿 친구 1종</td></tr>
 </table>
 
+<h3>일본 Google Play 계정: 뽑기 횟수(천장)</h3>
+<p>일본 Google Play 계정에서는 테마의 친구를 모두 모아도 시크릿 친구를 주지 않습니다(축하 메시지만 나옵니다). 대신 테마 머신에서 아래 횟수만큼 뽑으면 그 테마의 시크릿 친구 1종을 확정으로 받습니다(누적 횟수, 테마마다 한 번). 티켓·광고·새 친구 확정권 뽑기를 모두 셉니다. 지금까지의 횟수는 게임 안 머신 화면과 확률 창에 나옵니다.</p>
+<table>
+  <tr><th style="width:26%">테마</th><th>조건</th><th style="width:30%">받는 친구</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-ceiling="100"><td>바다(OCEAN)</td><td>바다 머신에서 누적 100회 뽑기</td><td>바다 시크릿 친구 1종</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-ceiling="100"><td>디저트(DESSERT)</td><td>디저트 머신에서 누적 100회 뽑기</td><td>디저트 시크릿 친구 1종</td></tr>
+</table>
+
 <h2 id="guarantee">5. 새 친구 확정권 (가진 친구에 따라 확률이 바뀜)</h2>
 <p>새 친구 확정권은 고른 테마에서 아직 가지고 있지 않은 친구 1종을 확정으로 데려오는 아이템입니다. 어느 친구가 나올지는 아래 확률로 정해지므로 확률형 아이템입니다.</p>
 <ul>
@@ -110,7 +120,7 @@
   <li>후보가 1종이면 그 친구가 100%로 나옵니다. 테마의 친구를 모두 모았으면 그 테마에서는 쓸 수 없습니다.</li>
   <li>쓰기 직전 게임 안 확인 창에 지금의 후보와 확률을 모두 보여 드립니다(유효숫자 4자리로 반올림). 사람마다 가진 친구가 달라 확률이 다르므로, 이 페이지에는 계산 방법과 예시를 적습니다.</li>
   <li>확정권은 계정에 보관되며 사용 기한이 없습니다. 레버를 끝까지 돌렸을 때 1장이 쓰이고, 중간에 놓으면 쓰이지 않습니다.</li>
-  <li>확정권으로 테마의 친구를 모두 모으면 평소처럼 시크릿 친구를 받을 수 있습니다.</li>
+  <li>일본 밖 Google Play 계정은 확정권으로 테마의 친구를 모두 모으면 평소처럼 시크릿 친구를 받습니다. 일본 Google Play 계정은 확정권 뽑기도 천장 횟수에 셉니다.</li>
 </ul>
 <h3>예시: 가장 드문 두 친구만 남았을 때</h3>
 <table>
@@ -125,7 +135,7 @@
 <p>지금은 기간이나 수량이 한정된 뽑기가 없습니다. 한정 테마를 열면 제공 기간과 수량을 게임 안과 이 페이지에 적습니다.</p>
 
 <h2 id="changes">7. 확률을 바꿀 때</h2>
-<p>확률을 바꿀 때는 바뀌는 내용과 적용 시점을 미리 게임 안과 이 페이지에 알립니다. 긴급한 오류 수정처럼 미리 알리기 어려운 경우에는 고친 뒤 지체 없이 알립니다.</p>
+<p>확률을 바꿀 때는 바뀌는 내용과 적용 시점을 미리 게임 안과 이 페이지에 알립니다. 긴급한 오류 수정처럼 미리 알리기 어려운 경우에는 고친 뒤 지체 없이 알립니다. 일본 Google Play 계정의 천장 횟수를 바꿀 때도 같습니다.</p>
 
 <h2 id="history">8. 변경 이력</h2>
 <table>
@@ -223,6 +233,14 @@
   <tr data-theme="dessert" data-secret="1" data-percent="0"><td>Dessert</td><td>Collect all 15 Dessert friends</td><td>The Dessert secret friend</td></tr>
 </table>
 
+<h3>Accounts from the Japanese Google Play store: draw count (ceiling)</h3>
+<p>On accounts from the Japanese Google Play store, collecting every friend of a theme gives no secret friend (you get a celebration). Instead, the draws below in a theme&#x27;s machine, counted in total, give its secret friend for sure, once per theme; ticket, ad and new-friend pass draws all count. Your count so far is on the machine screen and in the odds window in the game.</p>
+<table>
+  <tr><th style="width:26%">Theme</th><th>Condition</th><th style="width:30%">You receive</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-ceiling="100"><td>Ocean</td><td>100 draws in total in the Ocean machine</td><td>The Ocean secret friend</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-ceiling="100"><td>Dessert</td><td>100 draws in total in the Dessert machine</td><td>The Dessert secret friend</td></tr>
+</table>
+
 <h2 id="guarantee">5. New-friend pass (odds that depend on the friends you have)</h2>
 <p>A new-friend pass brings, for sure, one friend of the chosen theme that you do not have yet. Which friend comes is decided by the odds below, so it is a randomized item.</p>
 <ul>
@@ -231,7 +249,7 @@
   <li>With one candidate left it comes at 100%. A theme whose friends you all have cannot take a pass.</li>
   <li>Right before you use one, the game shows your current candidates and all their odds (rounded to four significant digits). They depend on the friends each player has, so this page gives the rule and examples.</li>
   <li>Passes stay with your account and do not expire. One is used when the lever reaches its end; letting go early keeps it.</li>
-  <li>Completing a theme with a pass lets you receive its secret friend as usual.</li>
+  <li>Outside Japan, completing a theme with a pass gives its secret friend as usual; on accounts from the Japanese Google Play store, pass draws count toward the ceiling.</li>
 </ul>
 <h3>Example: only the two rarest friends are left</h3>
 <table>
@@ -246,7 +264,7 @@
 <p>There are no draws limited in time or quantity at the moment. A limited theme would show its period and quantity in the game and on this page.</p>
 
 <h2 id="changes">7. When the odds change</h2>
-<p>Before the odds change, we post what changes and from when, in the game and on this page. Urgent error fixes that cannot be announced in advance are posted without delay afterwards.</p>
+<p>Before the odds change, we post what changes and from when, in the game and on this page. Urgent error fixes that cannot be announced in advance are posted without delay afterwards. The same applies to the ceiling for accounts from the Japanese Google Play store.</p>
 
 <h2 id="history">8. Change history</h2>
 <table>
@@ -257,6 +275,137 @@
 
 <p>Contact: <a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
 <p class="links"><a href="index.html">Malang Pick</a><a href="terms.html?lang=en">Terms of Service</a><a href="privacy-policy.html?lang=en">Privacy Policy</a></p>
+</main>
+
+<!-- ==================== 日本語 ==================== -->
+<main id="ja" class="section" lang="ja">
+
+<h1>マランピック 提供割合</h1>
+<p class="updated">適用日：2026年10月5日 · 初回公開：2026年9月26日</p>
+
+<p class="lead"><strong>Tiger Room</strong>のモバイルゲーム「<strong>マランピック（Malang Pick）</strong>」のガチャ（テーマのガチャマシン）は、出てくるともだちがランダムに決まる「ランダム型アイテム提供方式」です。運営会社の所在国である韓国の「ゲーム産業振興に関する法律」第33条第2項と同法施行令第19条の2・別表3の2、Google PlayとApp Storeのランダム型アイテムに関するルールにもとづき、ガチャで出るすべてのともだちと、その提供割合をお知らせします。下の数字は、ゲームが実際の抽選に使うデータからそのまま作った値で、四捨五入していない正確な提供割合です。</p>
+
+<h2 id="ja-how">1. ガチャのしくみ</h2>
+<ul>
+  <li>テーマごとにガチャマシンがあり、1回引くと、そのテーマのともだち15種のうち1種が出ます。</li>
+  <li>チケット1枚（有償で購入することもできます）または広告1回の視聴で、1回引けます。どちらも提供割合は同じです。</li>
+  <li>チケットや広告で引くガチャは、毎回、前の結果に関係なく抽選されます。それまでに何が出たかによって、提供割合が変わることはありません（未所持確定チケットは5番をご覧ください）。</li>
+  <li>すでに持っているともだちも、提供割合どおりに出ます（重複します）。</li>
+  <li>ともだちの名前は、ゲームの日本語表示の名前です。等級は、ゲームの表記（英語）と日本語を併記しています。</li>
+</ul>
+
+<h2 id="ja-ocean">2. うみ（OCEAN）テーマ</h2>
+<h3>等級別の合計</h3>
+<table>
+  <tr><th>等級</th><th style="width:26%">ともだちの数</th><th style="width:28%">提供割合の合計</th></tr>
+  <tr data-theme="ocean" data-grade="common" data-percent="60"><td>COMMON（コモン）</td><td>6種</td><td>60%</td></tr>
+  <tr data-theme="ocean" data-grade="uncommon" data-percent="24"><td>UNCOMMON（アンコモン）</td><td>4種</td><td>24%</td></tr>
+  <tr data-theme="ocean" data-grade="rare" data-percent="12"><td>RARE（レア）</td><td>3種</td><td>12%</td></tr>
+  <tr data-theme="ocean" data-grade="legendary" data-percent="4"><td>LEGENDARY（レジェンド）</td><td>2種</td><td>4%</td></tr>
+  <tr><td><strong>合計</strong></td><td>15種</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>ともだち別の提供割合</h3>
+<table>
+  <tr><th style="width:34%">等級</th><th>ともだち</th><th style="width:22%">提供割合</th></tr>
+  <tr data-theme="ocean" data-friend="bubble" data-percent="10"><td>COMMON（コモン）</td><td>プクー</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="cove" data-percent="10"><td>COMMON（コモン）</td><td>ルキ</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="skim" data-percent="10"><td>COMMON（コモン）</td><td>ヒラリ</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="pebble" data-percent="10"><td>COMMON（コモン）</td><td>コロン</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="bubbles" data-percent="10"><td>COMMON（コモン）</td><td>コポ</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="sand" data-percent="10"><td>COMMON（コモン）</td><td>サンディ</td><td>10%</td></tr>
+  <tr data-theme="ocean" data-friend="shelly" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>ブギー</td><td>6%</td></tr>
+  <tr data-theme="ocean" data-friend="dash" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>キュイ</td><td>6%</td></tr>
+  <tr data-theme="ocean" data-friend="twirl" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>ハピ</td><td>6%</td></tr>
+  <tr data-theme="ocean" data-friend="pinch" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>クラビー</td><td>6%</td></tr>
+  <tr data-theme="ocean" data-friend="pearl" data-percent="4"><td>RARE（レア）</td><td>ピンキー</td><td>4%</td></tr>
+  <tr data-theme="ocean" data-friend="ripple" data-percent="4"><td>RARE（レア）</td><td>プルル</td><td>4%</td></tr>
+  <tr data-theme="ocean" data-friend="inky" data-percent="4"><td>RARE（レア）</td><td>パフリー</td><td>4%</td></tr>
+  <tr data-theme="ocean" data-friend="coral" data-percent="2"><td>LEGENDARY（レジェンド）</td><td>コーラル</td><td>2%</td></tr>
+  <tr data-theme="ocean" data-friend="penguin" data-percent="2"><td>LEGENDARY（レジェンド）</td><td>ペング</td><td>2%</td></tr>
+</table>
+
+<h2 id="ja-dessert">3. スイーツ（DESSERT）テーマ</h2>
+<h3>等級別の合計</h3>
+<table>
+  <tr><th>等級</th><th style="width:26%">ともだちの数</th><th style="width:28%">提供割合の合計</th></tr>
+  <tr data-theme="dessert" data-grade="common" data-percent="60"><td>COMMON（コモン）</td><td>6種</td><td>60%</td></tr>
+  <tr data-theme="dessert" data-grade="uncommon" data-percent="24"><td>UNCOMMON（アンコモン）</td><td>4種</td><td>24%</td></tr>
+  <tr data-theme="dessert" data-grade="rare" data-percent="12"><td>RARE（レア）</td><td>3種</td><td>12%</td></tr>
+  <tr data-theme="dessert" data-grade="legendary" data-percent="4"><td>LEGENDARY（レジェンド）</td><td>2種</td><td>4%</td></tr>
+  <tr><td><strong>合計</strong></td><td>15種</td><td><strong>100%</strong></td></tr>
+</table>
+<h3>ともだち別の提供割合</h3>
+<table>
+  <tr><th style="width:34%">等級</th><th>ともだち</th><th style="width:22%">提供割合</th></tr>
+  <tr data-theme="dessert" data-friend="mochi" data-percent="10"><td>COMMON（コモン）</td><td>もっちー</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="macaron" data-percent="10"><td>COMMON（コモン）</td><td>ミント</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="ginger" data-percent="10"><td>COMMON（コモン）</td><td>ジンジャー</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="puff" data-percent="10"><td>COMMON（コモン）</td><td>シュシュ</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="scoop" data-percent="10"><td>COMMON（コモン）</td><td>ベリーベリー</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="pop" data-percent="10"><td>COMMON（コモン）</td><td>レモンポップ</td><td>10%</td></tr>
+  <tr data-theme="dessert" data-friend="flan" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>プディ</td><td>6%</td></tr>
+  <tr data-theme="dessert" data-friend="crescent" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>クロニー</td><td>6%</td></tr>
+  <tr data-theme="dessert" data-friend="waffle" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>ワッフィ</td><td>6%</td></tr>
+  <tr data-theme="dessert" data-friend="boba" data-percent="6"><td>UNCOMMON（アンコモン）</td><td>ミルティ</td><td>6%</td></tr>
+  <tr data-theme="dessert" data-friend="shortcake" data-percent="4"><td>RARE（レア）</td><td>スイーティ</td><td>4%</td></tr>
+  <tr data-theme="dessert" data-friend="soda" data-percent="4"><td>RARE（レア）</td><td>メルミ</td><td>4%</td></tr>
+  <tr data-theme="dessert" data-friend="crepe" data-percent="4"><td>RARE（レア）</td><td>クルン</td><td>4%</td></tr>
+  <tr data-theme="dessert" data-friend="sundae" data-percent="2"><td>LEGENDARY（レジェンド）</td><td>トリプル</td><td>2%</td></tr>
+  <tr data-theme="dessert" data-friend="shake" data-percent="2"><td>LEGENDARY（レジェンド）</td><td>ユニコーン</td><td>2%</td></tr>
+</table>
+
+<h2 id="ja-secret">4. シークレットのともだち（条件を満たすと必ずもらえる）</h2>
+<p>シークレットのともだちは、ガチャの抽選では出ません（提供割合0%）。受け取ると、コレクションで名前と姿が公開されます。各テーマのシークレットは、1つのアカウントにつき1回受け取れます。受け取る条件は、Google Playアカウントの国・地域によって次のとおり異なります。</p>
+<h3 id="ja-ceiling">日本のGoogle Playアカウント：ガチャの回数（天井）</h3>
+<p>テーマのガチャマシンで下の回数を引くと、そのテーマのシークレットのともだち1種を必ず受け取れます。回数はテーマごとに数え、無料・有償のチケット、広告、未所持確定チケットで引いた回数をすべて含みます。これまでの回数は、ゲーム内のガチャマシンの画面と提供割合の画面で確認できます。日本のGoogle Playアカウントでは、テーマのともだちをすべてそろえても、それだけではシークレットはもらえません（お祝いのメッセージが表示されます）。</p>
+<table>
+  <tr><th style="width:26%">テーマ</th><th>条件</th><th style="width:30%">受け取れるともだち</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-ceiling="100"><td>うみ（OCEAN）</td><td>うみのガチャマシンで100回引く</td><td>うみのシークレットのともだち1種</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-ceiling="100"><td>スイーツ（DESSERT）</td><td>スイーツのガチャマシンで100回引く</td><td>スイーツのシークレットのともだち1種</td></tr>
+</table>
+
+<h3 id="ja-complete">日本以外の国・地域のGoogle Playアカウント：ともだちをそろえる</h3>
+<p>テーマのともだち15種をすべてそろえると、そのテーマのシークレットのともだち1種を受け取れます。</p>
+<table>
+  <tr><th style="width:26%">テーマ</th><th>条件</th><th style="width:30%">受け取れるともだち</th></tr>
+  <tr data-theme="ocean" data-secret="1" data-percent="0"><td>うみ（OCEAN）</td><td>うみのともだち15種をすべてそろえる</td><td>うみのシークレットのともだち1種</td></tr>
+  <tr data-theme="dessert" data-secret="1" data-percent="0"><td>スイーツ（DESSERT）</td><td>スイーツのともだち15種をすべてそろえる</td><td>スイーツのシークレットのともだち1種</td></tr>
+</table>
+
+<h2 id="ja-guarantee">5. 未所持確定チケット（持っているともだちによって提供割合が変わる）</h2>
+<p>未所持確定チケットは、選んだテーマで、まだ持っていないともだち1種を必ずお迎えできるアイテムです。どのともだちが出るかは下の提供割合で決まるため、ランダム型アイテムです。</p>
+<ul>
+  <li>候補：選んだテーマのともだちのうち、まだ持っていないともだちです。シークレットのともだちと、イベント期間だけ出るともだちは出ません。イベント中でも、候補と提供割合は変わりません。</li>
+  <li>提供割合：候補の通常の提供割合を、候補どうしで再計算した値です。候補のともだちの提供割合 ＝ そのともだちの通常の提供割合 ÷ 候補の通常の提供割合の合計。</li>
+  <li>候補が1種なら、そのともだちが100%で出ます。テーマのともだちをすべて持っている場合、そのテーマでは使えません。</li>
+  <li>使う直前に、ゲーム内の確認画面で、そのときの候補と提供割合をすべて表示します（有効数字4けたに四捨五入）。持っているともだちは人によって違い、提供割合も人によって異なるため、このページには計算のしかたと例を記載しています。</li>
+  <li>確定チケットはアカウントに保管され、使用期限はありません。レバーを最後まで回したときに1枚使われ、途中で手を離すと使われません。</li>
+  <li>日本のGoogle Playアカウントでは、確定チケットで引いた分も、天井までの回数に含めます。日本以外のGoogle Playアカウントでは、確定チケットでテーマのともだちをすべてそろえると、通常どおりシークレットのともだちを受け取れます。</li>
+</ul>
+<h3>例：いちばん出にくい2種だけが残っているとき</h3>
+<table>
+  <tr><th style="width:26%">テーマ</th><th>残っているともだち</th><th style="width:22%">通常の提供割合</th><th style="width:22%">確定チケットの提供割合</th></tr>
+  <tr data-guarantee-example="ocean" data-friend="penguin" data-percent="50"><td>うみ（OCEAN）</td><td>ペング</td><td>2%</td><td>50%</td></tr>
+  <tr data-guarantee-example="ocean" data-friend="coral" data-percent="50"><td>うみ（OCEAN）</td><td>コーラル</td><td>2%</td><td>50%</td></tr>
+  <tr data-guarantee-example="dessert" data-friend="shake" data-percent="50"><td>スイーツ（DESSERT）</td><td>ユニコーン</td><td>2%</td><td>50%</td></tr>
+  <tr data-guarantee-example="dessert" data-friend="sundae" data-percent="50"><td>スイーツ（DESSERT）</td><td>トリプル</td><td>2%</td><td>50%</td></tr>
+</table>
+
+<h2 id="ja-limited">6. 期間・数量限定</h2>
+<p>現在、期間や数量が限定されたガチャはありません。限定テーマを開く場合は、提供期間と数量をゲーム内とこのページに記載します。</p>
+
+<h2 id="ja-changes">7. 提供割合を変更するとき</h2>
+<p>提供割合を変更するときは、変更の内容と適用の時期を、事前にゲーム内とこのページでお知らせします。緊急の不具合修正など、事前にお知らせすることが難しい場合は、修正後すみやかにお知らせします。日本のGoogle Playアカウントの天井の回数を変更するときも同じです。</p>
+
+<h2 id="ja-history">8. 変更履歴</h2>
+<table>
+  <tr><th style="width:30%">日付</th><th>内容</th></tr>
+  <tr data-history="2026-10-05"><td>2026-10-05</td><td>うみ・スイーツの等級別の提供割合を変更：COMMON 48→60%、UNCOMMON 28→24%、RARE 15→12%、LEGENDARY 9→4%。ともだち1種あたり10%・6%・4%・2%で、同じ等級の中では同じ提供割合です。未所持確定チケットは、持っていないともだちの通常の提供割合をもとに、提供割合を再計算します。</td></tr>
+  <tr data-history="2026-09-26"><td>2026-09-26</td><td>提供割合を初めて公開：うみ・スイーツのガチャマシンのともだち別の提供割合（各15種）、等級別の合計、シークレットのともだちを受け取る条件</td></tr>
+</table>
+
+<p>お問い合わせ：<a href="mailto:tigerroom.official@gmail.com">tigerroom.official@gmail.com</a></p>
+<p class="links"><a href="index.html">マランピック</a><a href="terms.html?lang=ja">利用規約</a><a href="privacy-policy.html?lang=ja">プライバシーポリシー</a><a href="tokushoho.html">特定商取引法に基づく表記</a></p>
 </main>
 
 <footer>&copy; 2026 Tiger Room. All rights reserved.</footer>

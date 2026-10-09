@@ -42,12 +42,14 @@ a { color: var(--accent); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .updated { color: var(--soft); font-size: 14px; margin: 0 0 20px; }
 .lead { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-.lang-toggle { display: flex; justify-content: flex-end; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.lang-toggle { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
 .lang-toggle button {
   min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 999px;
   background: var(--card); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer;
 }
 .lang-toggle button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+/* Japanese sections and pages (2026-10, Builds/japan-launch-20261007): Japanese system fonts first */
+main:lang(ja), .lang-toggle button[data-lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, "Segoe UI", sans-serif; line-break: strict; }
 .section { display: none; }
 .section.active { display: block; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0 8px; font-size: 14px; table-layout: fixed; background: var(--card); }
