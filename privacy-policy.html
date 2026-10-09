@@ -51,7 +51,7 @@
   <tr><td>유료 결제(상점)</td><td>가능 (Google Play, 보호자 설정을 따름)</td><td>가능 (Google Play)</td><td>가능 (Google Play)</td></tr>
   <tr><td>Google 계정 연결</td><td>없음</td><td>없음</td><td>선택</td></tr>
   <tr><td>사용통계 · 오류 보고</td><td>보내지 않음</td><td>보내지 않음</td><td>선택 ('동의하고 시작'을 누른 경우. 설정에서 하나씩 끔)</td></tr>
-  <tr><td>외부 웹 페이지 열기</td><td>열지 않고 앱 안 안내로 대신</td><td>열림</td><td>열림</td></tr>
+  <tr><td>외부 웹 페이지 열기</td><td>말랑픽 안내 페이지(방침 · 약관 · 확률 · 계정 삭제)만 열고, 다른 페이지는 앱 안 안내로 대신</td><td>열림</td><td>열림</td></tr>
 </table>
 <p>연령대는 처음 실행할 때 한 번 정하며 앱 안에서 다시 입력할 수 없습니다. 18세 이상은 처음 화면에서 '동의하고 시작'(사용통계 · 오류 보고 켬)이나 '동의 없이 시작'(모두 끔)을 고르며, 어느 쪽이든 같은 게임을 이용할 수 있습니다. 이용 지역은 Google Play 계정의 국가로 정합니다(앱 0.4.173부터. 국가를 확인하기 전에는 '그 외 지역'으로 보며, 위치는 확인하지 않습니다. 앱 0.4.172까지는 이용자가 직접 골랐습니다). 지역은 기기에만 저장하며 개인정보 선택을 저장하는 방식과 한국 상점의 환불 안내에 씁니다. 이용 지역이 한국인 만 14세 미만은 13세라도 제한 모드로 이용합니다(앱 0.4.167부터, 11번).</p>
 
@@ -169,7 +169,7 @@
 <p>이 안내 웹사이트(mallang.tigerroom.app)는 쿠키와 방문 분석 도구를 쓰지 않습니다. 사이트를 제공하는 GitHub(GitHub Pages)는 보안을 위해 방문자의 IP 주소를 기록합니다.</p>
 
 <h2 id="children">11. 아동의 개인정보 (13세 미만 제한 모드)</h2>
-<p>말랑픽은 13세 이상을 주 대상으로 하는 게임입니다. 처음 실행할 때 입력한 생년월일로 13세 미만이면 제한 모드로 이용합니다(이용 지역이 한국인 만 14세 미만도 같습니다. 아래 '한국의 만 14세 미만 아동'). 제한 모드에서는 매일 받는 무료 티켓으로 뽑기 · 수집 · 놀이터를 이용할 수 있고(보상형 광고는 맞춤이 아닌 어린이용 광고만 보이고, 유료 결제는 Google Play의 보호자 설정을 따릅니다), 사용통계, 오류 보고, Google 계정 연결, 외부 웹 페이지 열기가 모두 꺼집니다.</p>
+<p>말랑픽은 13세 이상을 주 대상으로 하는 게임입니다. 처음 실행할 때 입력한 생년월일로 13세 미만이면 제한 모드로 이용합니다(이용 지역이 한국인 만 14세 미만도 같습니다. 아래 '한국의 만 14세 미만 아동'). 제한 모드에서는 매일 받는 무료 티켓으로 뽑기 · 수집 · 놀이터를 이용할 수 있고(보상형 광고는 맞춤이 아닌 어린이용 광고만 보이고, 유료 결제는 Google Play의 보호자 설정을 따릅니다), 사용통계, 오류 보고, Google 계정 연결, 외부 웹 페이지 열기(말랑픽 안내 페이지 제외)가 모두 꺼집니다.</p>
 <h3>제한 모드에서 처리하는 정보</h3>
 <ul>
   <li>지속 식별자: 게임 계정 식별자(Firebase 익명 계정 ID), 서버와 콘텐츠 전송 과정의 IP 주소, 앱 무결성 확인 정보(App Check · Play Integrity)</li>   <li>광고: Google(AdMob)에 아동 대상으로 표시해 보내는 광고 요청과 광고 조회 · 시청 · 보상 기록, IP 주소로 추정한 대략적 위치(광고 식별자는 보내지 않음)</li>   <li>결제 기록(결제한 경우): 1번 표의 유료 결제 항목과 같습니다</li>
@@ -180,7 +180,7 @@
 <p>이름, 이메일, 전화번호, 사진, 정확한 위치는 받지 않으며 생년월일은 보내거나 저장하지 않습니다.</p>
 <h3>내부 운영 목적으로만 씁니다</h3>
 <p>위 식별자는 미국 COPPA가 정한 "서비스 내부 운영 지원" 목적으로만 씁니다. 게임 계정 인증과 게임 기록 유지(아이가 모은 친구 보여 주기), 게임 콘텐츠 전달과 네트워크 통신, 티켓 중복 지급 · 뽑기 재시도 방지와 부정 이용 차단, 서비스 보안과 안정성 유지, 법령 준수(일본 「경품표시법」에 따른 시크릿 받는 방식 판정 포함)입니다.</p>
-<p>이 식별자로 아이에게 연락하거나, 행태 맞춤 광고를 하거나, 개인 프로필을 만들지 않으며 다른 목적으로 쓰지 않습니다. 이를 위해 13세 미만 기기에서는 사용통계와 오류 보고를 시작하지 않고 Google 계정 연결과 외부 링크를 막습니다. 결제는 Google Play가 처리하며, 회사는 결제 확인과 환불 처리에 필요한 주문 정보만 받습니다. 광고는 Google(AdMob)에 아동 대상 요청으로만 보내며, 광고 식별자 · 맞춤 광고 · 리마케팅 없이 문맥 광고와 노출 빈도 제한에만 쓰입니다. 서버에는 PID나 연락처 같은 다른 식별 정보를 두지 않으며, 이 정보는 5번의 Google(Firebase)과 Cloudflare만 서비스 제공을 위해 처리합니다.</p>
+<p>이 식별자로 아이에게 연락하거나, 행태 맞춤 광고를 하거나, 개인 프로필을 만들지 않으며 다른 목적으로 쓰지 않습니다. 이를 위해 13세 미만 기기에서는 사용통계와 오류 보고를 시작하지 않고 Google 계정 연결과 외부 링크(말랑픽 안내 페이지 제외)를 막습니다. 결제는 Google Play가 처리하며, 회사는 결제 확인과 환불 처리에 필요한 주문 정보만 받습니다. 광고는 Google(AdMob)에 아동 대상 요청으로만 보내며, 광고 식별자 · 맞춤 광고 · 리마케팅 없이 문맥 광고와 노출 빈도 제한에만 쓰입니다. 서버에는 PID나 연락처 같은 다른 식별 정보를 두지 않으며, 이 정보는 5번의 Google(Firebase)과 Cloudflare만 서비스 제공을 위해 처리합니다.</p>
 <p>이전 버전에서 Google 계정을 연결해 둔 기기에서 13세 미만으로 확인되면, 그 계정 정보와 기록은 지우거나 바꾸지 않고 게임 서버 연결을 시작하지 않습니다. 보호자는 12번 연락처로 그 계정의 열람이나 삭제를 요청할 수 있습니다.</p>
 <h3>아동 정보 보관 정책</h3>
 <ul>
@@ -273,7 +273,7 @@
   <tr><td>Purchases (shop)</td><td>Available (Google Play, under its parental controls)</td><td>Available (Google Play)</td><td>Available (Google Play)</td></tr>
   <tr><td>Google account link</td><td>None</td><td>None</td><td>Optional</td></tr>
   <tr><td>Usage analytics and crash reports</td><td>Never sent</td><td>Never sent</td><td>Optional (if you tap "Agree and start"; each can be turned off in Settings)</td></tr>
-  <tr><td>Opening outside web pages</td><td>Not opened; an in-app summary is shown instead</td><td>Opened</td><td>Opened</td></tr>
+  <tr><td>Opening outside web pages</td><td>Only the Malang Pick pages (policy, terms, odds, account deletion); other pages show an in-app summary instead</td><td>Opened</td><td>Opened</td></tr>
 </table>
 <p>The age band is set once at first launch and cannot be re-entered in the App. Users 18 and older choose "Agree and start" (analytics and crash reports on) or "Start without agreeing" (both off) on the first screen and get the same game either way. Your region is your Google Play account's country (from app version 0.4.173; until the country is known it counts as other regions, and your location is never checked; up to 0.4.172 you chose it yourself). The region is stored only on the device and is used for how privacy choices are stored and for the Korean refund notice in the shop. Users under 14 whose region is South Korea use restricted mode, even at 13 (from app version 0.4.167, section 11).</p>
 
@@ -391,7 +391,7 @@
 <p>This website (mallang.tigerroom.app) uses no cookies or visitor analytics. GitHub, which hosts it (GitHub Pages), logs visitors' IP addresses for security purposes.</p>
 
 <h2 id="en-children">11. Children (Restricted Mode for Users Under 13)</h2>
-<p>Malang Pick is intended mainly for users 13 and older. If the date of birth entered at first launch shows the user is under 13, the App runs in restricted mode (so it does for users under 14 whose region is South Korea; see "Children under 14 in Korea" below). In restricted mode the child can only draw with daily free tickets, collect and use the playground (rewarded ads show non-personalized, child-safe ads only, and purchases follow Google Play's parental controls); usage analytics, crash reports, Google account linking and opening outside web pages are all off.</p>
+<p>Malang Pick is intended mainly for users 13 and older. If the date of birth entered at first launch shows the user is under 13, the App runs in restricted mode (so it does for users under 14 whose region is South Korea; see "Children under 14 in Korea" below). In restricted mode the child can only draw with daily free tickets, collect and use the playground (rewarded ads show non-personalized, child-safe ads only, and purchases follow Google Play's parental controls); usage analytics, crash reports, Google account linking and opening outside web pages (except the Malang Pick pages) are all off.</p>
 <h3>Information processed in restricted mode</h3>
 <ul>
   <li>Persistent identifiers: the game account identifier (Firebase anonymous account ID), IP addresses seen by our server and content delivery, app integrity data (App Check, Play Integrity)</li>   <li>Ads: child-directed ad requests to Google (AdMob), ad view, play and reward records, the approximate location estimated from the IP address (no advertising ID)</li>   <li>Purchase records (if the child buys): as in the purchases row of section 1</li>
@@ -402,7 +402,7 @@
 <p>We do not collect the child's name, email, phone number, photos or precise location, and the date of birth is never sent or stored.</p>
 <h3>Used only for internal operations</h3>
 <p>We collect these persistent identifiers solely to provide support for the internal operations of the App, as defined by COPPA: authenticating the game account and keeping game records (showing the friends the child collected), delivering game content and performing network communications, preventing double ticket grants and repeated draws and blocking abuse, keeping the service secure and stable, and complying with the law (including setting the secret rule under Japan's premiums law).</p>
-<p>We do not use or disclose these identifiers to contact a specific child, for behavioral advertising, to build a profile, or for any other purpose. To ensure this, the App never starts analytics or crash reporting for users under 13 and blocks Google account linking and outside links. Purchases are processed by Google Play; we receive only the order details needed to confirm and refund them. Ads are requested from Google (AdMob) only as child-directed requests, without the advertising ID, personalized ads or remarketing, and are used only for contextual ads and frequency capping, which COPPA counts as support for internal operations. Our server keeps no other identifying data such as a PID or contact details for these accounts, and only Google (Firebase) and Cloudflare (section 5) process this information to provide the service.</p>
+<p>We do not use or disclose these identifiers to contact a specific child, for behavioral advertising, to build a profile, or for any other purpose. To ensure this, the App never starts analytics or crash reporting for users under 13 and blocks Google account linking and outside links (except the Malang Pick pages). Purchases are processed by Google Play; we receive only the order details needed to confirm and refund them. Ads are requested from Google (AdMob) only as child-directed requests, without the advertising ID, personalized ads or remarketing, and are used only for contextual ads and frequency capping, which COPPA counts as support for internal operations. Our server keeps no other identifying data such as a PID or contact details for these accounts, and only Google (Firebase) and Cloudflare (section 5) process this information to provide the service.</p>
 <p>If a device on which a Google account was linked in an earlier version is confirmed to belong to a user under 13, the App leaves that account's information and records unchanged and does not connect to the game server. A parent can ask to review or delete that account using the contact in section 12.</p>
 <h3>Children's data retention policy</h3>
 <ul>
@@ -493,7 +493,7 @@
   <tr><td>有償購入（ショップ）</td><td>できます（Google Play。保護者向けの設定に従います）</td><td>できます（Google Play）</td><td>できます（Google Play）</td></tr>
   <tr><td>Google連携</td><td>ありません</td><td>ありません</td><td>任意</td></tr>
   <tr><td>利用統計・エラーレポート</td><td>送りません</td><td>送りません</td><td>任意（「同意してはじめる」を選んだ場合。設定で1つずつオフにできます）</td></tr>
-  <tr><td>外部のWebページを開く</td><td>開かず、アプリ内の案内でお知らせします</td><td>開きます</td><td>開きます</td></tr>
+  <tr><td>外部のWebページを開く</td><td>マランピックの案内ページ（ポリシー・規約・提供割合・アカウント削除）だけを開き、ほかのページはアプリ内の案内でお知らせします</td><td>開きます</td><td>開きます</td></tr>
 </table>
 <p>年齢区分は初回起動時に一度だけ決まり、アプリ内で入力し直すことはできません。18歳以上の方は、最初の画面で「同意してはじめる」（利用統計・エラーレポートをオン）か「同意せずにはじめる」（どちらもオフ）を選び、どちらを選んでも同じゲームを遊べます。利用する地域は、Google Playアカウントの国で決まります（アプリのバージョン0.4.173以降。国がわかるまでは「その他の地域」として扱い、位置は確認しません。0.4.172までは利用者が選んでいました）。日本のGoogle Playアカウントは「その他の地域」になります。<!-- b225 -->地域は端末にだけ保存し、プライバシー設定の保存方法と、韓国のショップの払い戻し案内に使います。また、利用する地域が韓国の満14歳未満の方は、13歳でも制限モードになります（アプリのバージョン0.4.167以降。韓国の法令への対応です。11番）。<!-- b219 --></p>
 
@@ -628,7 +628,7 @@
 <p>この案内用のWebサイト（mallang.tigerroom.app）は、Cookieとアクセス解析ツールを使いません。サイトを提供しているGitHub（GitHub Pages）は、セキュリティのために訪問者のIPアドレスを記録します。</p>
 
 <h2 id="ja-children">11. お子さまの個人情報（13歳未満の制限モード）</h2>
-<p>マランピックは、主に13歳以上の方を対象とするゲームです。初回起動時に入力した生年月日から13歳未満とわかった場合は、制限モードになります（利用する地域が韓国の満14歳未満の方も同じです。<!-- b219 -->下の「韓国の満14歳未満のお子さま」）。制限モードでは、毎日受け取る無料チケットでのガチャ・コレクション・ひろばを利用でき（リワード広告はパーソナライズされていない子ども向けの広告だけで、有償購入はGoogle Playの保護者向けの設定に従います）、利用統計、エラーレポート、Google連携、外部のWebページを開く機能はすべてオフになります。</p>
+<p>マランピックは、主に13歳以上の方を対象とするゲームです。初回起動時に入力した生年月日から13歳未満とわかった場合は、制限モードになります（利用する地域が韓国の満14歳未満の方も同じです。<!-- b219 -->下の「韓国の満14歳未満のお子さま」）。制限モードでは、毎日受け取る無料チケットでのガチャ・コレクション・ひろばを利用でき（リワード広告はパーソナライズされていない子ども向けの広告だけで、有償購入はGoogle Playの保護者向けの設定に従います）、利用統計、エラーレポート、Google連携、外部のWebページを開く機能（マランピックの案内ページを除く）はすべてオフになります。</p>
 <h3>制限モードで取り扱う情報</h3>
 <ul>
   <li>継続的な識別子：ゲームアカウントの識別子（Firebaseの匿名アカウントID）、サーバーとコンテンツ配信の過程でのIPアドレス、アプリの完全性確認の情報（App Check・Play Integrity）</li>   <li>広告：Google（AdMob）へ子ども向けの設定を付けて送る広告リクエストと、広告の表示・視聴・報酬の記録、IPアドレスから推定したおおよその位置（広告IDは送りません）</li>   <li>購入の記録（購入した場合）：1番の表の有償購入と同じです</li>
@@ -639,7 +639,7 @@
 <p>名前、メールアドレス、電話番号、写真、正確な位置情報は受け取らず、生年月日は送信も保存もしません。</p>
 <h3>内部の運営の目的だけに使います</h3>
 <p>上の識別子と情報は、米国のCOPPAが定める「サービスの内部の運営の支援」の目的だけに使います。具体的には、ゲームアカウントの認証とゲーム記録の保持（お子さまが集めたともだちを表示すること）、ゲームのコンテンツの配信とネットワーク通信、チケットの二重付与や同じガチャの重複処理の防止、不正利用の遮断、サービスのセキュリティと安定性の維持、法令の遵守（日本の景品表示法に合わせたシークレットの受け取り方式の判定を含みます）です。</p>
-<p>これらの識別子と情報を使って、お子さまに連絡したり、行動にもとづくパーソナライズ広告をしたり、個人のプロフィールを作ったりすることはなく、ほかの目的にも使いません。そのため、13歳未満の方の端末では、利用統計とエラーレポートを起動せず、Google連携と外部へのリンクも止めます。購入はGoogle Playが取り扱い、当社は購入の確認と払い戻しの処理に必要な注文の情報だけを受け取ります。広告はGoogle（AdMob）へ子ども向けのリクエストとしてだけ送り、広告ID・パーソナライズ広告・リマーケティングを使わず、文脈に応じた広告と表示回数の制限にだけ使われます。サーバーにはPIDや連絡先のようなほかの識別情報を置かず、この情報は5番のGoogle（Firebase）とCloudflareだけが、サービスの提供のために取り扱います。</p>
+<p>これらの識別子と情報を使って、お子さまに連絡したり、行動にもとづくパーソナライズ広告をしたり、個人のプロフィールを作ったりすることはなく、ほかの目的にも使いません。そのため、13歳未満の方の端末では、利用統計とエラーレポートを起動せず、Google連携と外部へのリンク（マランピックの案内ページを除く）も止めます。購入はGoogle Playが取り扱い、当社は購入の確認と払い戻しの処理に必要な注文の情報だけを受け取ります。広告はGoogle（AdMob）へ子ども向けのリクエストとしてだけ送り、広告ID・パーソナライズ広告・リマーケティングを使わず、文脈に応じた広告と表示回数の制限にだけ使われます。サーバーにはPIDや連絡先のようなほかの識別情報を置かず、この情報は5番のGoogle（Firebase）とCloudflareだけが、サービスの提供のために取り扱います。</p>
 <p>以前のバージョンでGoogle連携をしていた端末で13歳未満と確認された場合は、そのアカウントの情報と記録を消したり変えたりせず、ゲームサーバーへの接続を始めません。保護者の方は、12番の連絡先から、そのアカウントの閲覧や削除をご請求いただけます。</p>
 <h3>お子さまの情報の保存に関する方針</h3>
 <ul>
